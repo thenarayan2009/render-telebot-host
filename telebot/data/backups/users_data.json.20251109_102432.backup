@@ -1,0 +1,177 @@
+{
+  "5358338496": {
+    "id": 5358338496,
+    "first_name": "Arthur",
+    "username": "ArthurHumes692180",
+    "balance": 1.0,
+    "total_earnings": 1.0,
+    "completed_tasks": [],
+    "referrals": 0,
+    "referred_by": 8070266485,
+    "joined_at": 1762577900.869419,
+    "current_task": null,
+    "language": "hindi",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  },
+  "8080766439": {
+    "id": 8080766439,
+    "first_name": "Vishnu",
+    "username": "WalterDover36594",
+    "balance": 1.0,
+    "total_earnings": 1.0,
+    "completed_tasks": [],
+    "referrals": 0,
+    "referred_by": 8070266485,
+    "joined_at": 1762577900.878791,
+    "current_task": null,
+    "language": "hindi",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  },
+  "5564093032": {
+    "id": 5564093032,
+    "first_name": "Sherry",
+    "username": "SherryAshle315365",
+    "balance": 1.0,
+    "total_earnings": 1.0,
+    "completed_tasks": [],
+    "referrals": 0,
+    "referred_by": 8070266485,
+    "joined_at": 1762577909.8716805,
+    "current_task": null,
+    "language": "hindi",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  },
+  "8070266485": {
+    "id": 8070266485,
+    "first_name": "Sam",
+    "username": null,
+    "balance": 1.0,
+    "total_earnings": 1.0,
+    "completed_tasks": [],
+    "referrals": 0,
+    "referred_by": null,
+    "joined_at": 1762578654.9640484,
+    "current_task": null,
+    "language": "hindi",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  },
+  "5367009004": {
+    "id": 5367009004,
+    "first_name": "Defaulter",
+    "username": "Defaulter124",
+    "balance": 2.5,
+    "total_earnings": 2.5,
+    "completed_tasks": [],
+    "referrals": 3,
+    "referred_by": null,
+    "joined_at": 1762582543.7489154,
+    "current_task": "4b890222-91dc-487e-833e-041ccb5acbc7",
+    "language": "hindi",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  },
+  "7949917255": {
+    "id": 7949917255,
+    "first_name": "Big boy",
+    "username": null,
+    "balance": 2.0,
+    "total_earnings": 2.0,
+    "completed_tasks": [
+      "4b890222-91dc-487e-833e-041ccb5acbc7"
+    ],
+    "referrals": 0,
+    "referred_by": 5367009004,
+    "joined_at": 1762600850.1961508,
+    "current_task": null,
+    "language": "english",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  },
+  "6238238443": {
+    "id": 6238238443,
+    "first_name": "Bkg",
+    "username": null,
+    "balance": 1.0,
+    "total_earnings": 1.0,
+    "completed_tasks": [],
+    "referrals": 0,
+    "referred_by": 5367009004,
+    "joined_at": 1762602561.450277,
+    "current_task": "4b890222-91dc-487e-833e-041ccb5acbc7",
+    "language": "hindi",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  },
+  "5387836518": {
+    "id": 5387836518,
+    "first_name": "Yash",
+    "username": null,
+    "balance": 1.5,
+    "total_earnings": 1.5,
+    "completed_tasks": [
+      "4b890222-91dc-487e-833e-041ccb5acbc7"
+    ],
+    "referrals": 0,
+    "referred_by": 5367009004,
+    "joined_at": 1762614016.7817242,
+    "current_task": null,
+    "language": "hindi",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  },
+  "6580698563": {
+    "id": 6580698563,
+    "first_name": "Manish",
+    "username": "MnhDevTip",
+    "balance": 1.0,
+    "total_earnings": 1.0,
+    "completed_tasks": [],
+    "referrals": 0,
+    "referred_by": null,
+    "joined_at": 1762615001.9946182,
+    "current_task": null,
+    "language": "english",
+    "custom_settings": {
+      "referral_reward": null,
+      "milestone_count": null,
+      "milestone_reward": null,
+      "welcome_bonus": 1.0
+    }
+  }
+}

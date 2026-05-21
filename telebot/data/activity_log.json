@@ -1,0 +1,3867 @@
+[
+  {
+    "timestamp": 1762577898.387968,
+    "user_id": 6156093406,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 5
+    },
+    "datetime": "2025-11-08 05:58:18"
+  },
+  {
+    "timestamp": 1762577898.3885508,
+    "user_id": 6156093406,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:18"
+  },
+  {
+    "timestamp": 1762577898.4050004,
+    "user_id": 7026409171,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 05:58:18"
+  },
+  {
+    "timestamp": 1762577898.4058895,
+    "user_id": 7026409171,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:18"
+  },
+  {
+    "timestamp": 1762577898.8258424,
+    "user_id": 6156093406,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:18"
+  },
+  {
+    "timestamp": 1762577898.8441484,
+    "user_id": 7026409171,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:18"
+  },
+  {
+    "timestamp": 1762577899.2779827,
+    "user_id": 5534492588,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 05:58:19"
+  },
+  {
+    "timestamp": 1762577899.2785785,
+    "user_id": 5534492588,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:19"
+  },
+  {
+    "timestamp": 1762577899.287214,
+    "user_id": 5432179609,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 05:58:19"
+  },
+  {
+    "timestamp": 1762577899.2886002,
+    "user_id": 5432179609,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:19"
+  },
+  {
+    "timestamp": 1762577899.6999125,
+    "user_id": 5534492588,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:19"
+  },
+  {
+    "timestamp": 1762577899.7124104,
+    "user_id": 5432179609,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:19"
+  },
+  {
+    "timestamp": 1762577900.48043,
+    "user_id": 7531702498,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 5
+    },
+    "datetime": "2025-11-08 05:58:20"
+  },
+  {
+    "timestamp": 1762577900.4818103,
+    "user_id": 7531702498,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:20"
+  },
+  {
+    "timestamp": 1762577900.492291,
+    "user_id": 7155451501,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:20"
+  },
+  {
+    "timestamp": 1762577900.867937,
+    "user_id": 7531702498,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:20"
+  },
+  {
+    "timestamp": 1762577900.8774738,
+    "user_id": 7155451501,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:20"
+  },
+  {
+    "timestamp": 1762577901.2327664,
+    "user_id": 5358338496,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 05:58:21"
+  },
+  {
+    "timestamp": 1762577901.2337012,
+    "user_id": 5358338496,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:21"
+  },
+  {
+    "timestamp": 1762577901.2554185,
+    "user_id": 8080766439,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 05:58:21"
+  },
+  {
+    "timestamp": 1762577901.256516,
+    "user_id": 8080766439,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:21"
+  },
+  {
+    "timestamp": 1762577901.5794873,
+    "user_id": 5358338496,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:21"
+  },
+  {
+    "timestamp": 1762577901.6008563,
+    "user_id": 8080766439,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:21"
+  },
+  {
+    "timestamp": 1762577910.2429576,
+    "user_id": 5564093032,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 05:58:30"
+  },
+  {
+    "timestamp": 1762577910.2442214,
+    "user_id": 5564093032,
+    "action": "user_registered",
+    "data": {
+      "referrer": 8070266485
+    },
+    "datetime": "2025-11-08 05:58:30"
+  },
+  {
+    "timestamp": 1762577910.6168094,
+    "user_id": 5564093032,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 05:58:30"
+  },
+  {
+    "timestamp": 1762578655.3273492,
+    "user_id": 8070266485,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 06:10:55"
+  },
+  {
+    "timestamp": 1762578655.3287315,
+    "user_id": 8070266485,
+    "action": "user_registered",
+    "data": {
+      "referrer": null
+    },
+    "datetime": "2025-11-08 06:10:55"
+  },
+  {
+    "timestamp": 1762578655.6823742,
+    "user_id": 8070266485,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 06:10:55"
+  },
+  {
+    "timestamp": 1762578661.4829485,
+    "user_id": 8070266485,
+    "action": "text_message",
+    "data": {
+      "text": "CT DC. Cnss da A e"
+    },
+    "datetime": "2025-11-08 06:11:01"
+  },
+  {
+    "timestamp": 1762582544.1483636,
+    "user_id": 5367009004,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 07:15:44"
+  },
+  {
+    "timestamp": 1762582544.1495419,
+    "user_id": 5367009004,
+    "action": "user_registered",
+    "data": {
+      "referrer": null
+    },
+    "datetime": "2025-11-08 07:15:44"
+  },
+  {
+    "timestamp": 1762582544.5237353,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 07:15:44"
+  },
+  {
+    "timestamp": 1762582668.242895,
+    "user_id": 5367009004,
+    "action": "admin_message_single",
+    "data": {
+      "user_id": 8070266485,
+      "message": "Hello 👋 sam Please msg me \n@Defaulter124"
+    },
+    "datetime": "2025-11-08 07:17:48"
+  },
+  {
+    "timestamp": 1762599717.9688222,
+    "user_id": 8070266485,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 0
+    },
+    "datetime": "2025-11-08 12:01:57"
+  },
+  {
+    "timestamp": 1762600850.1939805,
+    "user_id": 5367009004,
+    "action": "referral_earned",
+    "data": {
+      "referred_user": 7949917255,
+      "reward": 0.5,
+      "total_referrals": 1
+    },
+    "datetime": "2025-11-08 12:20:50"
+  },
+  {
+    "timestamp": 1762600850.5322266,
+    "user_id": 7949917255,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 12:20:50"
+  },
+  {
+    "timestamp": 1762600850.5335958,
+    "user_id": 7949917255,
+    "action": "user_registered",
+    "data": {
+      "referrer": 5367009004
+    },
+    "datetime": "2025-11-08 12:20:50"
+  },
+  {
+    "timestamp": 1762600850.8664377,
+    "user_id": 7949917255,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 12:20:50"
+  },
+  {
+    "timestamp": 1762600862.294466,
+    "user_id": 7949917255,
+    "action": "language_changed",
+    "data": {
+      "language": "english"
+    },
+    "datetime": "2025-11-08 12:21:02"
+  },
+  {
+    "timestamp": 1762600870.5528204,
+    "user_id": 7949917255,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 12:21:10"
+  },
+  {
+    "timestamp": 1762600875.8455865,
+    "user_id": 7949917255,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 12:21:15"
+  },
+  {
+    "timestamp": 1762600909.9382637,
+    "user_id": 7949917255,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 12:21:49"
+  },
+  {
+    "timestamp": 1762600925.8397553,
+    "user_id": 7949917255,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 12:22:05"
+  },
+  {
+    "timestamp": 1762600943.059172,
+    "user_id": 7949917255,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-08 12:22:23"
+  },
+  {
+    "timestamp": 1762600945.16946,
+    "user_id": 7949917255,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 0
+    },
+    "datetime": "2025-11-08 12:22:25"
+  },
+  {
+    "timestamp": 1762601148.349868,
+    "user_id": 7949917255,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 12:25:48"
+  },
+  {
+    "timestamp": 1762602561.4484437,
+    "user_id": 5367009004,
+    "action": "referral_earned",
+    "data": {
+      "referred_user": 6238238443,
+      "reward": 0.5,
+      "total_referrals": 2
+    },
+    "datetime": "2025-11-08 12:49:21"
+  },
+  {
+    "timestamp": 1762602561.737958,
+    "user_id": 6238238443,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 12:49:21"
+  },
+  {
+    "timestamp": 1762602561.7404997,
+    "user_id": 6238238443,
+    "action": "user_registered",
+    "data": {
+      "referrer": 5367009004
+    },
+    "datetime": "2025-11-08 12:49:21"
+  },
+  {
+    "timestamp": 1762602562.0339057,
+    "user_id": 6238238443,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 12:49:22"
+  },
+  {
+    "timestamp": 1762602576.1151845,
+    "user_id": 6238238443,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-08 12:49:36"
+  },
+  {
+    "timestamp": 1762602587.15895,
+    "user_id": 6238238443,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 12:49:47"
+  },
+  {
+    "timestamp": 1762602606.3740084,
+    "user_id": 6238238443,
+    "action": "help_accessed",
+    "data": {},
+    "datetime": "2025-11-08 12:50:06"
+  },
+  {
+    "timestamp": 1762602609.4160256,
+    "user_id": 6238238443,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 0
+    },
+    "datetime": "2025-11-08 12:50:09"
+  },
+  {
+    "timestamp": 1762608065.5698144,
+    "user_id": 7949917255,
+    "action": "task_approved",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-08 14:21:05"
+  },
+  {
+    "timestamp": 1762608080.6570814,
+    "user_id": 7949917255,
+    "action": "task_approved",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-08 14:21:20"
+  },
+  {
+    "timestamp": 1762609109.3187351,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 14:38:29"
+  },
+  {
+    "timestamp": 1762609111.4968083,
+    "user_id": 5367009004,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 14:38:31"
+  },
+  {
+    "timestamp": 1762614016.7796988,
+    "user_id": 5367009004,
+    "action": "referral_earned",
+    "data": {
+      "referred_user": 5387836518,
+      "reward": 0.5,
+      "total_referrals": 3
+    },
+    "datetime": "2025-11-08 16:00:16"
+  },
+  {
+    "timestamp": 1762614017.1481965,
+    "user_id": 5387836518,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 16:00:17"
+  },
+  {
+    "timestamp": 1762614017.1504877,
+    "user_id": 5387836518,
+    "action": "user_registered",
+    "data": {
+      "referrer": 5367009004
+    },
+    "datetime": "2025-11-08 16:00:17"
+  },
+  {
+    "timestamp": 1762614017.5507896,
+    "user_id": 5387836518,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 16:00:17"
+  },
+  {
+    "timestamp": 1762614028.7171948,
+    "user_id": 5387836518,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 16:00:28"
+  },
+  {
+    "timestamp": 1762614071.6073194,
+    "user_id": 5387836518,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 16:01:11"
+  },
+  {
+    "timestamp": 1762614110.3254814,
+    "user_id": 5387836518,
+    "action": "task_approved",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-08 16:01:50"
+  },
+  {
+    "timestamp": 1762614878.7999978,
+    "user_id": 5387836518,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.5
+    },
+    "datetime": "2025-11-08 16:14:38"
+  },
+  {
+    "timestamp": 1762614886.0462399,
+    "user_id": 5387836518,
+    "action": "task_requested",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-08 16:14:46"
+  },
+  {
+    "timestamp": 1762615435.4370465,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762615435.4366484
+    },
+    "datetime": "2025-11-08 16:23:55"
+  },
+  {
+    "timestamp": 1762615482.8196092,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762615482.8192673
+    },
+    "datetime": "2025-11-08 16:24:42"
+  },
+  {
+    "timestamp": 1762615503.8145962,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762615503.8141599
+    },
+    "datetime": "2025-11-08 16:25:03"
+  },
+  {
+    "timestamp": 1762615515.4393704,
+    "user_id": 6580698563,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 16:25:15"
+  },
+  {
+    "timestamp": 1762615523.0628967,
+    "user_id": 6580698563,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-08 16:25:23"
+  },
+  {
+    "timestamp": 1762615523.0650394,
+    "user_id": 6580698563,
+    "action": "user_registered",
+    "data": {
+      "referrer": null
+    },
+    "datetime": "2025-11-08 16:25:23"
+  },
+  {
+    "timestamp": 1762615523.607265,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 16:25:23"
+  },
+  {
+    "timestamp": 1762615527.4786763,
+    "user_id": 6580698563,
+    "action": "language_changed",
+    "data": {
+      "language": "english"
+    },
+    "datetime": "2025-11-08 16:25:27"
+  },
+  {
+    "timestamp": 1762615529.4508157,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 16:25:29"
+  },
+  {
+    "timestamp": 1762615531.553277,
+    "user_id": 6580698563,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-08 16:25:31"
+  },
+  {
+    "timestamp": 1762619093.822307,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'ADMIN_IDS' is not defined"
+    },
+    "datetime": "2025-11-08 17:24:53"
+  },
+  {
+    "timestamp": 1762619172.011242,
+    "user_id": 7949917255,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 17:26:12"
+  },
+  {
+    "timestamp": 1762619176.761696,
+    "user_id": 7949917255,
+    "action": "task_requested",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-08 17:26:16"
+  },
+  {
+    "timestamp": 1762619186.5519736,
+    "user_id": 7949917255,
+    "action": "balance_checked",
+    "data": {
+      "balance": 2.0
+    },
+    "datetime": "2025-11-08 17:26:26"
+  },
+  {
+    "timestamp": 1762619229.903953,
+    "user_id": 7949917255,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-08 17:27:09"
+  },
+  {
+    "timestamp": 1762619551.7900016,
+    "user_id": 7949917255,
+    "action": "task_approved",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-08 17:32:31"
+  },
+  {
+    "timestamp": 1762619562.9686565,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'ADMIN_IDS' is not defined"
+    },
+    "datetime": "2025-11-08 17:32:42"
+  },
+  {
+    "timestamp": 1762619623.1743903,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'ADMIN_IDS' is not defined"
+    },
+    "datetime": "2025-11-08 17:33:43"
+  },
+  {
+    "timestamp": 1762619825.481829,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'ADMIN_IDS' is not defined"
+    },
+    "datetime": "2025-11-08 17:37:05"
+  },
+  {
+    "timestamp": 1762621267.2012253,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'ADMIN_IDS' is not defined"
+    },
+    "datetime": "2025-11-08 18:01:07"
+  },
+  {
+    "timestamp": 1762621286.5921817,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'ADMIN_IDS' is not defined"
+    },
+    "datetime": "2025-11-08 18:01:26"
+  },
+  {
+    "timestamp": 1762626542.588573,
+    "user_id": 7949917255,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-08 19:29:02"
+  },
+  {
+    "timestamp": 1762626545.3398113,
+    "user_id": 7949917255,
+    "action": "balance_checked",
+    "data": {
+      "balance": 2.5
+    },
+    "datetime": "2025-11-08 19:29:05"
+  },
+  {
+    "timestamp": 1762626549.9769874,
+    "user_id": 7949917255,
+    "action": "task_requested",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-08 19:29:09"
+  },
+  {
+    "timestamp": 1762626568.0275023,
+    "user_id": 7949917255,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-08 19:29:28"
+  },
+  {
+    "timestamp": 1762661141.4113991,
+    "user_id": 7949917255,
+    "action": "task_approved",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-09 05:05:41"
+  },
+  {
+    "timestamp": 1762662825.6448247,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'ADMIN_IDS' is not defined"
+    },
+    "datetime": "2025-11-09 05:33:45"
+  },
+  {
+    "timestamp": 1762664073.3471239,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762664073.3464222
+    },
+    "datetime": "2025-11-09 05:54:33"
+  },
+  {
+    "timestamp": 1762664154.646227,
+    "user_id": 6580698563,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-09 05:55:54"
+  },
+  {
+    "timestamp": 1762664157.4690063,
+    "user_id": 6580698563,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 0
+    },
+    "datetime": "2025-11-09 05:55:57"
+  },
+  {
+    "timestamp": 1762664436.102437,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762664436.101859
+    },
+    "datetime": "2025-11-09 06:00:36"
+  },
+  {
+    "timestamp": 1762668158.4750326,
+    "user_id": 7949917255,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 07:02:38"
+  },
+  {
+    "timestamp": 1762668170.316593,
+    "user_id": 7949917255,
+    "action": "task_requested",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006"
+    },
+    "datetime": "2025-11-09 07:02:50"
+  },
+  {
+    "timestamp": 1762668223.0147192,
+    "user_id": 7949917255,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006"
+    },
+    "datetime": "2025-11-09 07:03:43"
+  },
+  {
+    "timestamp": 1762684912.5608425,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762684912.5603542
+    },
+    "datetime": "2025-11-09 11:41:52"
+  },
+  {
+    "timestamp": 1762685054.0463753,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762685054.0435288
+    },
+    "datetime": "2025-11-09 11:44:14"
+  },
+  {
+    "timestamp": 1762685065.6088345,
+    "user_id": 5367009004,
+    "action": "balance_checked",
+    "data": {
+      "balance": 2.5
+    },
+    "datetime": "2025-11-09 11:44:25"
+  },
+  {
+    "timestamp": 1762685065.9253092,
+    "user_id": 5367009004,
+    "action": "help_accessed",
+    "data": {},
+    "datetime": "2025-11-09 11:44:25"
+  },
+  {
+    "timestamp": 1762685066.2734077,
+    "user_id": 6580698563,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-09 11:44:26"
+  },
+  {
+    "timestamp": 1762685105.6460285,
+    "user_id": 8418380760,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-09 11:45:05"
+  },
+  {
+    "timestamp": 1762686129.9702425,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762686129.9696102
+    },
+    "datetime": "2025-11-09 12:02:09"
+  },
+  {
+    "timestamp": 1762686557.6839685,
+    "user_id": 7949917255,
+    "action": "task_approved",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-09 12:09:17"
+  },
+  {
+    "timestamp": 1762687643.613185,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762687643.6126075
+    },
+    "datetime": "2025-11-09 12:27:23"
+  },
+  {
+    "timestamp": 1762687904.3347032,
+    "user_id": 5367009004,
+    "action": "admin_task_added",
+    "data": {
+      "task_id": "7f45c1db-c117-4824-81bd-cd1b2752ede6",
+      "title": "Download Now 📥",
+      "reward": 0.5,
+      "notified": 9
+    },
+    "datetime": "2025-11-09 12:31:44"
+  },
+  {
+    "timestamp": 1762687939.5801833,
+    "user_id": 6580698563,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-09 12:32:19"
+  },
+  {
+    "timestamp": 1762687959.989393,
+    "user_id": 6580698563,
+    "action": "task_rejected",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "rejected_by": 5367009004
+    },
+    "datetime": "2025-11-09 12:32:39"
+  },
+  {
+    "timestamp": 1762687965.825268,
+    "user_id": 6580698563,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-09 12:32:45"
+  },
+  {
+    "timestamp": 1762688049.842773,
+    "user_id": 5367009004,
+    "action": "admin_message_single",
+    "data": {
+      "user_id": 6580698563,
+      "message": "Brother task ko sahi se complete kro"
+    },
+    "datetime": "2025-11-09 12:34:09"
+  },
+  {
+    "timestamp": 1762692916.3808827,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762692916.3802927
+    },
+    "datetime": "2025-11-09 13:55:16"
+  },
+  {
+    "timestamp": 1762692969.6052456,
+    "user_id": 8418380760,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-09 13:56:09"
+  },
+  {
+    "timestamp": 1762692969.609051,
+    "user_id": 8418380760,
+    "action": "user_registered",
+    "data": {
+      "referrer": null
+    },
+    "datetime": "2025-11-09 13:56:09"
+  },
+  {
+    "timestamp": 1762692970.0161977,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 13:56:10"
+  },
+  {
+    "timestamp": 1762692998.3056972,
+    "user_id": 8418380760,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-09 13:56:38"
+  },
+  {
+    "timestamp": 1762693002.5238957,
+    "user_id": 8418380760,
+    "action": "language_changed",
+    "data": {
+      "language": "english"
+    },
+    "datetime": "2025-11-09 13:56:42"
+  },
+  {
+    "timestamp": 1762693004.9174829,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 13:56:44"
+  },
+  {
+    "timestamp": 1762693063.4635205,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762693063.4629693
+    },
+    "datetime": "2025-11-09 13:57:43"
+  },
+  {
+    "timestamp": 1762693102.9183517,
+    "user_id": 8418380760,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 1
+    },
+    "datetime": "2025-11-09 13:58:22"
+  },
+  {
+    "timestamp": 1762693112.7495086,
+    "user_id": 8418380760,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-09 13:58:32"
+  },
+  {
+    "timestamp": 1762693116.4432955,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'user_data' is not defined"
+    },
+    "datetime": "2025-11-09 13:58:36"
+  },
+  {
+    "timestamp": 1762693134.1776617,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 13:58:54"
+  },
+  {
+    "timestamp": 1762693140.246937,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 13:59:00"
+  },
+  {
+    "timestamp": 1762696522.4921625,
+    "user_id": 5367009004,
+    "action": "channel_added",
+    "data": {
+      "channel_username": "yonogameswithnarayan",
+      "channel_name": "Join My Channel & Earn Real Money 💰"
+    },
+    "datetime": "2025-11-09 14:55:22"
+  },
+  {
+    "timestamp": 1762696548.163395,
+    "user_id": 6817352658,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 2
+    },
+    "datetime": "2025-11-09 14:55:48"
+  },
+  {
+    "timestamp": 1762696550.3488874,
+    "user_id": 6817352658,
+    "action": "welcome_bonus_received",
+    "data": {
+      "amount": 1.0
+    },
+    "datetime": "2025-11-09 14:55:50"
+  },
+  {
+    "timestamp": 1762696550.3527005,
+    "user_id": 6817352658,
+    "action": "user_registered",
+    "data": {
+      "referrer": null
+    },
+    "datetime": "2025-11-09 14:55:50"
+  },
+  {
+    "timestamp": 1762696550.672954,
+    "user_id": 6817352658,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 14:55:50"
+  },
+  {
+    "timestamp": 1762696555.6941998,
+    "user_id": 5367009004,
+    "action": "help_accessed",
+    "data": {},
+    "datetime": "2025-11-09 14:55:55"
+  },
+  {
+    "timestamp": 1762696807.7618837,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:00:07"
+  },
+  {
+    "timestamp": 1762696980.9676862,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:03:00"
+  },
+  {
+    "timestamp": 1762696990.4513118,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:03:10"
+  },
+  {
+    "timestamp": 1762697191.3003223,
+    "user_id": 6580698563,
+    "action": "channel_removed",
+    "data": {
+      "channel_username": "yonogameswithnarayan"
+    },
+    "datetime": "2025-11-09 15:06:31"
+  },
+  {
+    "timestamp": 1762697213.7859826,
+    "user_id": 6580698563,
+    "action": "channel_added",
+    "data": {
+      "channel_username": "yonogameswithnarayan",
+      "channel_name": "Testing"
+    },
+    "datetime": "2025-11-09 15:06:53"
+  },
+  {
+    "timestamp": 1762697223.7618778,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:07:03"
+  },
+  {
+    "timestamp": 1762697619.3332791,
+    "user_id": 6817352658,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 2
+    },
+    "datetime": "2025-11-09 15:13:39"
+  },
+  {
+    "timestamp": 1762697624.2835722,
+    "user_id": 6817352658,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:13:44"
+  },
+  {
+    "timestamp": 1762697797.8843532,
+    "user_id": 6817352658,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 2
+    },
+    "datetime": "2025-11-09 15:16:37"
+  },
+  {
+    "timestamp": 1762697889.7769418,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762697889.7762558
+    },
+    "datetime": "2025-11-09 15:18:09"
+  },
+  {
+    "timestamp": 1762697926.5502083,
+    "user_id": 5367009004,
+    "action": "channel_removed",
+    "data": {
+      "channel_username": "yonogameswithnarayan"
+    },
+    "datetime": "2025-11-09 15:18:46"
+  },
+  {
+    "timestamp": 1762698003.557059,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762698003.5564387
+    },
+    "datetime": "2025-11-09 15:20:03"
+  },
+  {
+    "timestamp": 1762698015.9349647,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:20:15"
+  },
+  {
+    "timestamp": 1762698028.8865228,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'user_data' is not defined"
+    },
+    "datetime": "2025-11-09 15:20:28"
+  },
+  {
+    "timestamp": 1762698105.2592525,
+    "user_id": 8418380760,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-09 15:21:45"
+  },
+  {
+    "timestamp": 1762698108.8635328,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'user_data' is not defined"
+    },
+    "datetime": "2025-11-09 15:21:48"
+  },
+  {
+    "timestamp": 1762698125.871852,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'user_data' is not defined"
+    },
+    "datetime": "2025-11-09 15:22:05"
+  },
+  {
+    "timestamp": 1762698143.8250642,
+    "user_id": 8418380760,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-09 15:22:23"
+  },
+  {
+    "timestamp": 1762698145.2149158,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'user_data' is not defined"
+    },
+    "datetime": "2025-11-09 15:22:25"
+  },
+  {
+    "timestamp": 1762698162.2306561,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'user_data' is not defined"
+    },
+    "datetime": "2025-11-09 15:22:42"
+  },
+  {
+    "timestamp": 1762698185.3259983,
+    "user_id": 8418380760,
+    "action": "help_accessed",
+    "data": {},
+    "datetime": "2025-11-09 15:23:05"
+  },
+  {
+    "timestamp": 1762698188.5263622,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'user_data' is not defined"
+    },
+    "datetime": "2025-11-09 15:23:08"
+  },
+  {
+    "timestamp": 1762698210.2578952,
+    "user_id": 8418380760,
+    "action": "text_message",
+    "data": {
+      "text": "Refer"
+    },
+    "datetime": "2025-11-09 15:23:30"
+  },
+  {
+    "timestamp": 1762698214.0151322,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:23:34"
+  },
+  {
+    "timestamp": 1762698369.8948672,
+    "user_id": 5367009004,
+    "action": "text_message",
+    "data": {
+      "text": "yonogameswithnarayan|𝐉𝐨𝐢𝐧 & 𝐄𝐚𝐫𝐧 💰"
+    },
+    "datetime": "2025-11-09 15:26:09"
+  },
+  {
+    "timestamp": 1762698422.0836575,
+    "user_id": 5367009004,
+    "action": "channel_added",
+    "data": {
+      "channel_username": "yonogameswithnarayan",
+      "channel_name": "𝐉𝐨𝐢𝐧 & 𝐄𝐚𝐫𝐧 💰"
+    },
+    "datetime": "2025-11-09 15:27:02"
+  },
+  {
+    "timestamp": 1762698491.7026622,
+    "user_id": 8418380760,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-09 15:28:11"
+  },
+  {
+    "timestamp": 1762698495.3043225,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "name 'user_data' is not defined"
+    },
+    "datetime": "2025-11-09 15:28:15"
+  },
+  {
+    "timestamp": 1762698564.8810627,
+    "user_id": 5367009004,
+    "action": "channel_added",
+    "data": {
+      "channel_username": "referandearn2009",
+      "channel_name": "𝐉𝐨𝐢𝐧 & 𝐄𝐚𝐫𝐧 💰"
+    },
+    "datetime": "2025-11-09 15:29:24"
+  },
+  {
+    "timestamp": 1762698604.4040225,
+    "user_id": 5367009004,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-09 15:30:04"
+  },
+  {
+    "timestamp": 1762699302.7133796,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1762699302.712501
+    },
+    "datetime": "2025-11-09 15:41:42"
+  },
+  {
+    "timestamp": 1762699494.7400353,
+    "user_id": 6580698563,
+    "action": "user_registered",
+    "data": {
+      "referrer": null
+    },
+    "datetime": "2025-11-09 15:44:54"
+  },
+  {
+    "timestamp": 1762699495.1672032,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:44:55"
+  },
+  {
+    "timestamp": 1762699499.777851,
+    "user_id": 6580698563,
+    "action": "language_changed",
+    "data": {
+      "language": "english"
+    },
+    "datetime": "2025-11-09 15:44:59"
+  },
+  {
+    "timestamp": 1762699502.086647,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:45:02"
+  },
+  {
+    "timestamp": 1762699508.7289114,
+    "user_id": 6580698563,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 0
+    },
+    "datetime": "2025-11-09 15:45:08"
+  },
+  {
+    "timestamp": 1762699510.8344865,
+    "user_id": 6580698563,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-09 15:45:10"
+  },
+  {
+    "timestamp": 1762699518.5845315,
+    "user_id": 6580698563,
+    "action": "unknown_command",
+    "data": {
+      "text": "/ADMIN"
+    },
+    "datetime": "2025-11-09 15:45:18"
+  },
+  {
+    "timestamp": 1762699544.4573967,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 15:45:44"
+  },
+  {
+    "timestamp": 1762708386.7013397,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-09 18:13:06"
+  },
+  {
+    "timestamp": 1762736496.8302832,
+    "user_id": 8418380760,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-10 02:01:36"
+  },
+  {
+    "timestamp": 1762757231.4628093,
+    "user_id": 5367009004,
+    "action": "admin_edit_global_min_withdrawal",
+    "data": {
+      "amount": 10.0
+    },
+    "datetime": "2025-11-10 07:47:11"
+  },
+  {
+    "timestamp": 1762785921.633381,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-10 15:45:21"
+  },
+  {
+    "timestamp": 1762851371.9556139,
+    "user_id": 5084735001,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 5367009004,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-11 09:56:11"
+  },
+  {
+    "timestamp": 1762851372.5560458,
+    "user_id": 5084735001,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-11 09:56:12"
+  },
+  {
+    "timestamp": 1762851402.4977527,
+    "user_id": 5084735001,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-11 09:56:42"
+  },
+  {
+    "timestamp": 1762851421.2420363,
+    "user_id": 5084735001,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-11 09:57:01"
+  },
+  {
+    "timestamp": 1762851478.064116,
+    "user_id": 5084735001,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-11 09:57:58"
+  },
+  {
+    "timestamp": 1762864165.9376838,
+    "user_id": 6580698563,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-11 13:29:25"
+  },
+  {
+    "timestamp": 1762867162.489895,
+    "user_id": 5367009004,
+    "action": "admin_broadcast",
+    "data": {
+      "total_users": 12,
+      "success": 12,
+      "failed": 0,
+      "blocked": 0,
+      "message": "आप इस वीडियो को देखकर जान सकते हैं कि Task Reward Bot मैं टास्क कैसे पूरा करना है - https://t.me/ref"
+    },
+    "datetime": "2025-11-11 14:19:22"
+  },
+  {
+    "timestamp": 1762867478.4644828,
+    "user_id": 5367009004,
+    "action": "channel_removed",
+    "data": {
+      "channel_username": "referandearn2009"
+    },
+    "datetime": "2025-11-11 14:24:38"
+  },
+  {
+    "timestamp": 1762867492.7167692,
+    "user_id": 5367009004,
+    "action": "channel_added",
+    "data": {
+      "channel_username": "𝐉𝐨𝐢𝐧 & 𝐄𝐚𝐫𝐧 💰",
+      "channel_name": "referandearn2009"
+    },
+    "datetime": "2025-11-11 14:24:52"
+  },
+  {
+    "timestamp": 1762867515.5569377,
+    "user_id": 5367009004,
+    "action": "channel_removed",
+    "data": {
+      "channel_username": "𝐉𝐨𝐢𝐧 & 𝐄𝐚𝐫𝐧 💰"
+    },
+    "datetime": "2025-11-11 14:25:15"
+  },
+  {
+    "timestamp": 1762867664.8566072,
+    "user_id": 5367009004,
+    "action": "channel_added",
+    "data": {
+      "channel_username": "referandearn2009",
+      "channel_name": "𝐉𝐨𝐢𝐧 & 𝐄𝐚𝐫𝐧 💰"
+    },
+    "datetime": "2025-11-11 14:27:44"
+  },
+  {
+    "timestamp": 1762873299.3711166,
+    "user_id": 5367009004,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-11 16:01:39"
+  },
+  {
+    "timestamp": 1762873787.6560163,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-11 16:09:47"
+  },
+  {
+    "timestamp": 1762873820.53208,
+    "user_id": 5367009004,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-11 16:10:20"
+  },
+  {
+    "timestamp": 1762873823.4740336,
+    "user_id": 5367009004,
+    "action": "task_approved",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-11 16:10:23"
+  },
+  {
+    "timestamp": 1762873832.6867523,
+    "user_id": 5367009004,
+    "action": "task_requested",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-11 16:10:32"
+  },
+  {
+    "timestamp": 1762873841.4631865,
+    "user_id": 5367009004,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-11 16:10:41"
+  },
+  {
+    "timestamp": 1762881877.7715046,
+    "user_id": 5367009004,
+    "action": "task_approved",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-11 18:24:37"
+  },
+  {
+    "timestamp": 1762882005.2778413,
+    "user_id": 6817352658,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-11 18:26:45"
+  },
+  {
+    "timestamp": 1762882030.1687536,
+    "user_id": 6817352658,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-11 18:27:10"
+  },
+  {
+    "timestamp": 1762955059.0166414,
+    "user_id": 6817352658,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-12 14:44:19"
+  },
+  {
+    "timestamp": 1762955062.0586812,
+    "user_id": 6817352658,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-12 14:44:22"
+  },
+  {
+    "timestamp": 1762963373.3369322,
+    "user_id": 5367009004,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 4
+    },
+    "datetime": "2025-11-12 17:02:53"
+  },
+  {
+    "timestamp": 1763021804.561869,
+    "user_id": 8359204662,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 5367009004,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-13 09:16:44"
+  },
+  {
+    "timestamp": 1763021805.1805875,
+    "user_id": 8359204662,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-13 09:16:45"
+  },
+  {
+    "timestamp": 1763021814.341881,
+    "user_id": 8359204662,
+    "action": "text_message",
+    "data": {
+      "text": "Start"
+    },
+    "datetime": "2025-11-13 09:16:54"
+  },
+  {
+    "timestamp": 1763021823.379877,
+    "user_id": 8359204662,
+    "action": "text_message",
+    "data": {
+      "text": "Menu"
+    },
+    "datetime": "2025-11-13 09:17:03"
+  },
+  {
+    "timestamp": 1763021832.8874207,
+    "user_id": 8359204662,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-13 09:17:12"
+  },
+  {
+    "timestamp": 1763022040.2468839,
+    "user_id": 5367009004,
+    "action": "admin_message_single",
+    "data": {
+      "user_id": 8359204662,
+      "message": "आप इस वीडियो को देखकर जान सकते हैं कि Task Reward Bot मैं टास्क कैसे पूरा करना है - https://t.me/ref"
+    },
+    "datetime": "2025-11-13 09:20:40"
+  },
+  {
+    "timestamp": 1763053070.8223438,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-13 17:57:50"
+  },
+  {
+    "timestamp": 1763083874.8314726,
+    "user_id": 6945513868,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 5367009004,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-14 02:31:14"
+  },
+  {
+    "timestamp": 1763083875.420076,
+    "user_id": 6945513868,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-14 02:31:15"
+  },
+  {
+    "timestamp": 1763083884.412004,
+    "user_id": 6945513868,
+    "action": "text_message",
+    "data": {
+      "text": "Ho gaya"
+    },
+    "datetime": "2025-11-14 02:31:24"
+  },
+  {
+    "timestamp": 1763083887.5707693,
+    "user_id": 6945513868,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 02:31:27"
+  },
+  {
+    "timestamp": 1763083898.6753964,
+    "user_id": 6945513868,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-14 02:31:38"
+  },
+  {
+    "timestamp": 1763083902.0851345,
+    "user_id": 6945513868,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-14 02:31:42"
+  },
+  {
+    "timestamp": 1763085517.1180856,
+    "user_id": 1297688027,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 5367009004,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-14 02:58:37"
+  },
+  {
+    "timestamp": 1763085517.7223861,
+    "user_id": 1297688027,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-14 02:58:37"
+  },
+  {
+    "timestamp": 1763085524.4020932,
+    "user_id": 1297688027,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 02:58:44"
+  },
+  {
+    "timestamp": 1763085541.5269291,
+    "user_id": 1297688027,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-14 02:59:01"
+  },
+  {
+    "timestamp": 1763085675.159278,
+    "user_id": 1297688027,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-14 03:01:15"
+  },
+  {
+    "timestamp": 1763085717.1955442,
+    "user_id": 1297688027,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-14 03:01:57"
+  },
+  {
+    "timestamp": 1763086953.3632345,
+    "user_id": 7106842927,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 5367009004,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-14 03:22:33"
+  },
+  {
+    "timestamp": 1763086953.9550595,
+    "user_id": 7106842927,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-14 03:22:33"
+  },
+  {
+    "timestamp": 1763086994.6645167,
+    "user_id": 7106842927,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 03:23:14"
+  },
+  {
+    "timestamp": 1763087023.951527,
+    "user_id": 7106842927,
+    "action": "text_message",
+    "data": {
+      "text": "Ok"
+    },
+    "datetime": "2025-11-14 03:23:43"
+  },
+  {
+    "timestamp": 1763087048.4487908,
+    "user_id": 7106842927,
+    "action": "help_accessed",
+    "data": {},
+    "datetime": "2025-11-14 03:24:08"
+  },
+  {
+    "timestamp": 1763087433.3571143,
+    "user_id": 8418380760,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 0
+    },
+    "datetime": "2025-11-14 03:30:33"
+  },
+  {
+    "timestamp": 1763087465.8122854,
+    "user_id": 7190905161,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 8418380760,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-14 03:31:05"
+  },
+  {
+    "timestamp": 1763087466.4112933,
+    "user_id": 7190905161,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-14 03:31:06"
+  },
+  {
+    "timestamp": 1763087468.450016,
+    "user_id": 7190905161,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 03:31:08"
+  },
+  {
+    "timestamp": 1763087475.7376978,
+    "user_id": 7190905161,
+    "action": "language_changed",
+    "data": {
+      "language": "english"
+    },
+    "datetime": "2025-11-14 03:31:15"
+  },
+  {
+    "timestamp": 1763087477.8071954,
+    "user_id": 7190905161,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 03:31:17"
+  },
+  {
+    "timestamp": 1763087497.0161803,
+    "user_id": 7190905161,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-14 03:31:37"
+  },
+  {
+    "timestamp": 1763087501.2854264,
+    "user_id": 7190905161,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-14 03:31:41"
+  },
+  {
+    "timestamp": 1763090644.717408,
+    "user_id": 7985521701,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 5367009004,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-14 04:24:04"
+  },
+  {
+    "timestamp": 1763090645.553506,
+    "user_id": 7985521701,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-14 04:24:05"
+  },
+  {
+    "timestamp": 1763090648.5624785,
+    "user_id": 7985521701,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:24:08"
+  },
+  {
+    "timestamp": 1763090651.8213177,
+    "user_id": 7985521701,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-14 04:24:11"
+  },
+  {
+    "timestamp": 1763090723.0689578,
+    "user_id": 7985521701,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-14 04:25:23"
+  },
+  {
+    "timestamp": 1763090735.0088582,
+    "user_id": 7985521701,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 0
+    },
+    "datetime": "2025-11-14 04:25:35"
+  },
+  {
+    "timestamp": 1763090744.015699,
+    "user_id": 7985521701,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:25:44"
+  },
+  {
+    "timestamp": 1763090762.4903617,
+    "user_id": 7985521701,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-14 04:26:02"
+  },
+  {
+    "timestamp": 1763090807.5661614,
+    "user_id": 8418380760,
+    "action": "text_message",
+    "data": {
+      "text": "Hlo"
+    },
+    "datetime": "2025-11-14 04:26:47"
+  },
+  {
+    "timestamp": 1763090817.141363,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:26:57"
+  },
+  {
+    "timestamp": 1763090836.9834883,
+    "user_id": 8418380760,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.5
+    },
+    "datetime": "2025-11-14 04:27:16"
+  },
+  {
+    "timestamp": 1763090848.164065,
+    "user_id": 7985521701,
+    "action": "task_approved",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-14 04:27:28"
+  },
+  {
+    "timestamp": 1763090875.3325295,
+    "user_id": 6580698563,
+    "action": "text_message",
+    "data": {
+      "text": "Hlo"
+    },
+    "datetime": "2025-11-14 04:27:55"
+  },
+  {
+    "timestamp": 1763090881.0645454,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:28:01"
+  },
+  {
+    "timestamp": 1763090885.4125118,
+    "user_id": 7985521701,
+    "action": "text_message",
+    "data": {
+      "text": "Newtask"
+    },
+    "datetime": "2025-11-14 04:28:05"
+  },
+  {
+    "timestamp": 1763090893.7892163,
+    "user_id": 5367009004,
+    "action": "task_requested",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-14 04:28:13"
+  },
+  {
+    "timestamp": 1763090912.0123167,
+    "user_id": 7985521701,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-14 04:28:32"
+  },
+  {
+    "timestamp": 1763090914.2947025,
+    "user_id": 7985521701,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:28:34"
+  },
+  {
+    "timestamp": 1763090916.4320354,
+    "user_id": 7985521701,
+    "action": "task_requested",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-14 04:28:36"
+  },
+  {
+    "timestamp": 1763090987.0076554,
+    "user_id": 7985521701,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-14 04:29:47"
+  },
+  {
+    "timestamp": 1763091008.2667646,
+    "user_id": 7985521701,
+    "action": "task_approved",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-14 04:30:08"
+  },
+  {
+    "timestamp": 1763091018.1595123,
+    "user_id": 7985521701,
+    "action": "balance_checked",
+    "data": {
+      "balance": 2.0
+    },
+    "datetime": "2025-11-14 04:30:18"
+  },
+  {
+    "timestamp": 1763091029.9319422,
+    "user_id": 7985521701,
+    "action": "task_requested",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-14 04:30:29"
+  },
+  {
+    "timestamp": 1763091047.549439,
+    "user_id": 7985521701,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-14 04:30:47"
+  },
+  {
+    "timestamp": 1763091067.1752374,
+    "user_id": 6580698563,
+    "action": "text_message",
+    "data": {
+      "text": "Hi"
+    },
+    "datetime": "2025-11-14 04:31:07"
+  },
+  {
+    "timestamp": 1763091070.03749,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:31:10"
+  },
+  {
+    "timestamp": 1763091098.3078406,
+    "user_id": 7985521701,
+    "action": "task_approved",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-14 04:31:38"
+  },
+  {
+    "timestamp": 1763091118.6757486,
+    "user_id": 7985521701,
+    "action": "task_requested",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006"
+    },
+    "datetime": "2025-11-14 04:31:58"
+  },
+  {
+    "timestamp": 1763091136.7884843,
+    "user_id": 5367009004,
+    "action": "balance_checked",
+    "data": {
+      "balance": 6.5
+    },
+    "datetime": "2025-11-14 04:32:16"
+  },
+  {
+    "timestamp": 1763091138.9380698,
+    "user_id": 5367009004,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 9
+    },
+    "datetime": "2025-11-14 04:32:18"
+  },
+  {
+    "timestamp": 1763091140.9944327,
+    "user_id": 5367009004,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 9
+    },
+    "datetime": "2025-11-14 04:32:20"
+  },
+  {
+    "timestamp": 1763091141.3148324,
+    "user_id": 5367009004,
+    "action": "help_accessed",
+    "data": {},
+    "datetime": "2025-11-14 04:32:21"
+  },
+  {
+    "timestamp": 1763091143.1930351,
+    "user_id": 5367009004,
+    "action": "help_accessed",
+    "data": {},
+    "datetime": "2025-11-14 04:32:23"
+  },
+  {
+    "timestamp": 1763091143.5168676,
+    "user_id": 5367009004,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 9
+    },
+    "datetime": "2025-11-14 04:32:23"
+  },
+  {
+    "timestamp": 1763091144.1195283,
+    "user_id": 5367009004,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 9
+    },
+    "datetime": "2025-11-14 04:32:24"
+  },
+  {
+    "timestamp": 1763091144.7185073,
+    "user_id": 5367009004,
+    "action": "balance_checked",
+    "data": {
+      "balance": 6.5
+    },
+    "datetime": "2025-11-14 04:32:24"
+  },
+  {
+    "timestamp": 1763091145.3303533,
+    "user_id": 5367009004,
+    "action": "balance_checked",
+    "data": {
+      "balance": 6.5
+    },
+    "datetime": "2025-11-14 04:32:25"
+  },
+  {
+    "timestamp": 1763091152.043821,
+    "user_id": 5367009004,
+    "action": "balance_checked",
+    "data": {
+      "balance": 6.5
+    },
+    "datetime": "2025-11-14 04:32:32"
+  },
+  {
+    "timestamp": 1763091152.6605675,
+    "user_id": 5367009004,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 9
+    },
+    "datetime": "2025-11-14 04:32:32"
+  },
+  {
+    "timestamp": 1763091152.9533803,
+    "user_id": 7985521701,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006"
+    },
+    "datetime": "2025-11-14 04:32:32"
+  },
+  {
+    "timestamp": 1763091153.556061,
+    "user_id": 7985521701,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:32:33"
+  },
+  {
+    "timestamp": 1763091192.6508992,
+    "user_id": 7985521701,
+    "action": "balance_checked",
+    "data": {
+      "balance": 2.5
+    },
+    "datetime": "2025-11-14 04:33:12"
+  },
+  {
+    "timestamp": 1763091234.549925,
+    "user_id": 7985521701,
+    "action": "task_approved",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-14 04:33:54"
+  },
+  {
+    "timestamp": 1763091239.6949575,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:33:59"
+  },
+  {
+    "timestamp": 1763091241.7914035,
+    "user_id": 5367009004,
+    "action": "language_changed",
+    "data": {
+      "language": "english"
+    },
+    "datetime": "2025-11-14 04:34:01"
+  },
+  {
+    "timestamp": 1763091379.7671134,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:36:19"
+  },
+  {
+    "timestamp": 1763091450.7753372,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:37:30"
+  },
+  {
+    "timestamp": 1763091522.2395213,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:38:42"
+  },
+  {
+    "timestamp": 1763091536.6341956,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:38:56"
+  },
+  {
+    "timestamp": 1763091650.6567748,
+    "user_id": 6580698563,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-14 04:40:50"
+  },
+  {
+    "timestamp": 1763091811.6479306,
+    "user_id": 8418380760,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 3
+    },
+    "datetime": "2025-11-14 04:43:31"
+  },
+  {
+    "timestamp": 1763091813.7439206,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 04:43:33"
+  },
+  {
+    "timestamp": 1763092969.8457294,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 05:02:49"
+  },
+  {
+    "timestamp": 1763092984.517655,
+    "user_id": 5367009004,
+    "action": "channel_added",
+    "data": {
+      "channel_username": "RewardVault",
+      "channel_name": "RewardVault"
+    },
+    "datetime": "2025-11-14 05:03:04"
+  },
+  {
+    "timestamp": 1763093007.1672602,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 05:03:27"
+  },
+  {
+    "timestamp": 1763093602.034812,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 05:13:22"
+  },
+  {
+    "timestamp": 1763094907.384195,
+    "user_id": 5367009004,
+    "action": "referral_link_accessed",
+    "data": {
+      "referrals_count": 9
+    },
+    "datetime": "2025-11-14 05:35:07"
+  },
+  {
+    "timestamp": 1763095191.4009209,
+    "user_id": 5367009004,
+    "action": "admin_task_added",
+    "data": {
+      "task_id": "24234ed5-a721-4f3b-b8d3-c73c3150ddf4",
+      "title": "Join CatCash and start earning rewards! 🐱💸",
+      "reward": 0.5,
+      "notified": 17
+    },
+    "datetime": "2025-11-14 05:39:51"
+  },
+  {
+    "timestamp": 1763095682.2365136,
+    "user_id": 7985521701,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 4
+    },
+    "datetime": "2025-11-14 05:48:02"
+  },
+  {
+    "timestamp": 1763095691.777438,
+    "user_id": 7985521701,
+    "action": "task_requested",
+    "data": {
+      "task_id": "24234ed5-a721-4f3b-b8d3-c73c3150ddf4"
+    },
+    "datetime": "2025-11-14 05:48:11"
+  },
+  {
+    "timestamp": 1763095764.503276,
+    "user_id": 5367009004,
+    "action": "admin_broadcast",
+    "data": {
+      "total_users": 18,
+      "success": 17,
+      "failed": 1,
+      "blocked": 0,
+      "message": "OLD GROUPS NEEDED AT HIGHEST RATE\n\n2022 - 2016 \n2023 \n\nHigh and low and non message \n\nAll needed at "
+    },
+    "datetime": "2025-11-14 05:49:24"
+  },
+  {
+    "timestamp": 1763095779.9748452,
+    "user_id": 5367009004,
+    "action": "admin_broadcast",
+    "data": {
+      "total_users": 18,
+      "success": 17,
+      "failed": 1,
+      "blocked": 0,
+      "message": "OLD GROUPS NEEDED AT HIGHEST RATE\n\n2022 - 2016 \n2023 \n\nHigh and low and non message \n\nAll needed at "
+    },
+    "datetime": "2025-11-14 05:49:39"
+  },
+  {
+    "timestamp": 1763096669.0481014,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 06:04:29"
+  },
+  {
+    "timestamp": 1763099311.5529869,
+    "user_id": 5367009004,
+    "action": "admin_task_added",
+    "data": {
+      "task_id": "bf4cb4eb-3ed7-4f16-be15-8c14f31ddc66",
+      "title": "Hey! Download money earning app MoneyHi",
+      "reward": 0.5,
+      "notified": 17
+    },
+    "datetime": "2025-11-14 06:48:31"
+  },
+  {
+    "timestamp": 1763109432.5388315,
+    "user_id": 8418380760,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 4
+    },
+    "datetime": "2025-11-14 09:37:12"
+  },
+  {
+    "timestamp": 1763109434.8513625,
+    "user_id": 8418380760,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 09:37:14"
+  },
+  {
+    "timestamp": 1763131703.9393363,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 15:48:23"
+  },
+  {
+    "timestamp": 1763131724.3732696,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 15:48:44"
+  },
+  {
+    "timestamp": 1763131780.7958515,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 15:49:40"
+  },
+  {
+    "timestamp": 1763131926.4660194,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 15:52:06"
+  },
+  {
+    "timestamp": 1763132006.3578148,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 15:53:26"
+  },
+  {
+    "timestamp": 1763132014.4209878,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 15:53:34"
+  },
+  {
+    "timestamp": 1763132167.6313713,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 15:56:07"
+  },
+  {
+    "timestamp": 1763135660.7197773,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 16:54:20"
+  },
+  {
+    "timestamp": 1763135679.6688218,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 16:54:39"
+  },
+  {
+    "timestamp": 1763135681.7434664,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 16:54:41"
+  },
+  {
+    "timestamp": 1763137499.432225,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-14 17:24:59"
+  },
+  {
+    "timestamp": 1763188408.6786113,
+    "user_id": 5367009004,
+    "action": "admin_broadcast",
+    "data": {
+      "total_users": 18,
+      "success": 15,
+      "failed": 3,
+      "blocked": 0,
+      "message": "🔔 New Task Available!\n\n📋 Hey! Download money earning app MoneyHi\n📝 Download and must use my referral"
+    },
+    "datetime": "2025-11-15 07:33:28"
+  },
+  {
+    "timestamp": 1763190866.0467722,
+    "user_id": 8418380760,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-15 08:14:26"
+  },
+  {
+    "timestamp": 1763191339.0160365,
+    "user_id": 8418380760,
+    "action": "task_rejected",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "rejected_by": 5367009004
+    },
+    "datetime": "2025-11-15 08:22:19"
+  },
+  {
+    "timestamp": 1763194959.3192387,
+    "user_id": 6973960344,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 5367009004,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-15 09:22:39"
+  },
+  {
+    "timestamp": 1763194960.1260712,
+    "user_id": 6973960344,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 4
+    },
+    "datetime": "2025-11-15 09:22:40"
+  },
+  {
+    "timestamp": 1763194967.7569897,
+    "user_id": 6973960344,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-15 09:22:47"
+  },
+  {
+    "timestamp": 1763195045.2334356,
+    "user_id": 6973960344,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-15 09:24:05"
+  },
+  {
+    "timestamp": 1763195111.453692,
+    "user_id": 6973960344,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-15 09:25:11"
+  },
+  {
+    "timestamp": 1763195126.5024002,
+    "user_id": 6973960344,
+    "action": "task_approved",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-15 09:25:26"
+  },
+  {
+    "timestamp": 1763195154.4498816,
+    "user_id": 6973960344,
+    "action": "text_message",
+    "data": {
+      "text": "Next"
+    },
+    "datetime": "2025-11-15 09:25:54"
+  },
+  {
+    "timestamp": 1763195162.5762336,
+    "user_id": 6973960344,
+    "action": "task_requested",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-15 09:26:02"
+  },
+  {
+    "timestamp": 1763195208.8224897,
+    "user_id": 6973960344,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-15 09:26:48"
+  },
+  {
+    "timestamp": 1763195217.4464045,
+    "user_id": 6973960344,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.5
+    },
+    "datetime": "2025-11-15 09:26:57"
+  },
+  {
+    "timestamp": 1763195227.2016823,
+    "user_id": 6973960344,
+    "action": "task_approved",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-15 09:27:07"
+  },
+  {
+    "timestamp": 1763195230.8447018,
+    "user_id": 6973960344,
+    "action": "task_requested",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-15 09:27:10"
+  },
+  {
+    "timestamp": 1763195272.1365879,
+    "user_id": 6973960344,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-15 09:27:52"
+  },
+  {
+    "timestamp": 1763195291.8118463,
+    "user_id": 6973960344,
+    "action": "task_approved",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-15 09:28:11"
+  },
+  {
+    "timestamp": 1763195294.6659348,
+    "user_id": 6973960344,
+    "action": "balance_checked",
+    "data": {
+      "balance": 2.5
+    },
+    "datetime": "2025-11-15 09:28:14"
+  },
+  {
+    "timestamp": 1763195298.106856,
+    "user_id": 6973960344,
+    "action": "task_requested",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006"
+    },
+    "datetime": "2025-11-15 09:28:18"
+  },
+  {
+    "timestamp": 1763195339.3651443,
+    "user_id": 6973960344,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006"
+    },
+    "datetime": "2025-11-15 09:28:59"
+  },
+  {
+    "timestamp": 1763195437.7892368,
+    "user_id": 6973960344,
+    "action": "task_approved",
+    "data": {
+      "task_id": "bca373f4-a9bb-44d0-8be8-5513a50cf006",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-15 09:30:37"
+  },
+  {
+    "timestamp": 1763195448.0536103,
+    "user_id": 6973960344,
+    "action": "task_requested",
+    "data": {
+      "task_id": "24234ed5-a721-4f3b-b8d3-c73c3150ddf4"
+    },
+    "datetime": "2025-11-15 09:30:48"
+  },
+  {
+    "timestamp": 1763203233.076211,
+    "user_id": 7120147788,
+    "action": "new_user_registered",
+    "data": {
+      "referred_by": 5367009004,
+      "welcome_bonus": 1.0
+    },
+    "datetime": "2025-11-15 11:40:33"
+  },
+  {
+    "timestamp": 1763203234.0071855,
+    "user_id": 7120147788,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 4
+    },
+    "datetime": "2025-11-15 11:40:34"
+  },
+  {
+    "timestamp": 1763203238.4421988,
+    "user_id": 7120147788,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-15 11:40:38"
+  },
+  {
+    "timestamp": 1763203242.462104,
+    "user_id": 7120147788,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-15 11:40:42"
+  },
+  {
+    "timestamp": 1763203260.0563228,
+    "user_id": 7120147788,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-15 11:41:00"
+  },
+  {
+    "timestamp": 1763203941.5154657,
+    "user_id": 5367009004,
+    "action": "admin_message_single",
+    "data": {
+      "user_id": 7120147788,
+      "message": "आप इस वीडियो को देखकर जान सकते हैं कि Task Reward Bot मैं टास्क कैसे पूरा करना है - https://t.me/ref"
+    },
+    "datetime": "2025-11-15 11:52:21"
+  },
+  {
+    "timestamp": 1763209546.106444,
+    "user_id": 8418380760,
+    "action": "task_requested",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-15 13:25:46"
+  },
+  {
+    "timestamp": 1763209596.0323505,
+    "user_id": 8418380760,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-15 13:26:36"
+  },
+  {
+    "timestamp": 1763210335.29903,
+    "user_id": 8418380760,
+    "action": "task_approved",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "reward": 0.5,
+      "approved_by": 5367009004
+    },
+    "datetime": "2025-11-15 13:38:55"
+  },
+  {
+    "timestamp": 1763212813.3219411,
+    "user_id": 7949917255,
+    "action": "channel_membership_verified",
+    "data": {
+      "channels": 4
+    },
+    "datetime": "2025-11-15 14:20:13"
+  },
+  {
+    "timestamp": 1763212822.3006682,
+    "user_id": 7949917255,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-15 14:20:22"
+  },
+  {
+    "timestamp": 1763212829.071614,
+    "user_id": 7949917255,
+    "action": "balance_checked",
+    "data": {
+      "balance": 3.5
+    },
+    "datetime": "2025-11-15 14:20:29"
+  },
+  {
+    "timestamp": 1763212838.4099789,
+    "user_id": 7949917255,
+    "action": "task_requested",
+    "data": {
+      "task_id": "24234ed5-a721-4f3b-b8d3-c73c3150ddf4"
+    },
+    "datetime": "2025-11-15 14:20:38"
+  },
+  {
+    "timestamp": 1763224618.9774225,
+    "user_id": 8418380760,
+    "action": "task_requested",
+    "data": {
+      "task_id": "282d2572-920e-4d87-a974-cd0d567821f9"
+    },
+    "datetime": "2025-11-15 17:36:58"
+  },
+  {
+    "timestamp": 1763270066.5790784,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763270066.5780747
+    },
+    "datetime": "2025-11-16 10:44:26"
+  },
+  {
+    "timestamp": 1763363132.543691,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763363132.5416958
+    },
+    "datetime": "2025-11-17 12:35:32"
+  },
+  {
+    "timestamp": 1763363163.0536158,
+    "user_id": 6580698563,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.0
+    },
+    "datetime": "2025-11-17 12:36:03"
+  },
+  {
+    "timestamp": 1763363767.4684327,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763363767.4674227
+    },
+    "datetime": "2025-11-17 12:46:07"
+  },
+  {
+    "timestamp": 1763363782.0791206,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 12:46:22"
+  },
+  {
+    "timestamp": 1763363788.4248972,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 12:46:28"
+  },
+  {
+    "timestamp": 1763363817.7134094,
+    "user_id": 6580698563,
+    "action": "task_selected",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-17 12:46:57"
+  },
+  {
+    "timestamp": 1763363822.3279734,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 12:47:02"
+  },
+  {
+    "timestamp": 1763363954.4326253,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763363954.4306152
+    },
+    "datetime": "2025-11-17 12:49:14"
+  },
+  {
+    "timestamp": 1763363972.0021515,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 12:49:32"
+  },
+  {
+    "timestamp": 1763364030.6908033,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763364030.6892922
+    },
+    "datetime": "2025-11-17 12:50:30"
+  },
+  {
+    "timestamp": 1763364045.1439927,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 12:50:45"
+  },
+  {
+    "timestamp": 1763364058.6517284,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 12:50:58"
+  },
+  {
+    "timestamp": 1763364137.989304,
+    "user_id": 6817352658,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 12:52:17"
+  },
+  {
+    "timestamp": 1763364157.6872282,
+    "user_id": 6817352658,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 12:52:37"
+  },
+  {
+    "timestamp": 1763364162.6404905,
+    "user_id": 6817352658,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 12:52:42"
+  },
+  {
+    "timestamp": 1763364165.5733454,
+    "user_id": 6817352658,
+    "action": "task_selected",
+    "data": {
+      "task_id": "4b890222-91dc-487e-833e-041ccb5acbc7"
+    },
+    "datetime": "2025-11-17 12:52:45"
+  },
+  {
+    "timestamp": 1763364171.369244,
+    "user_id": 6817352658,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 12:52:51"
+  },
+  {
+    "timestamp": 1763364525.9966397,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763364525.9951355
+    },
+    "datetime": "2025-11-17 12:58:45"
+  },
+  {
+    "timestamp": 1763364559.7091665,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 12:59:19"
+  },
+  {
+    "timestamp": 1763365026.503534,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763365026.5009964
+    },
+    "datetime": "2025-11-17 13:07:06"
+  },
+  {
+    "timestamp": 1763365041.0735917,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 13:07:21"
+  },
+  {
+    "timestamp": 1763365063.1456413,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763365063.1431613
+    },
+    "datetime": "2025-11-17 13:07:43"
+  },
+  {
+    "timestamp": 1763365078.1823123,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:07:58"
+  },
+  {
+    "timestamp": 1763365085.0430212,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 13:08:05"
+  },
+  {
+    "timestamp": 1763365087.296793,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 13:08:07"
+  },
+  {
+    "timestamp": 1763365091.2402663,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 13:08:11"
+  },
+  {
+    "timestamp": 1763365224.792209,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763365224.7911463
+    },
+    "datetime": "2025-11-17 13:10:24"
+  },
+  {
+    "timestamp": 1763365239.3625646,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:10:39"
+  },
+  {
+    "timestamp": 1763365249.9205754,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 13:10:49"
+  },
+  {
+    "timestamp": 1763365435.8307288,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763365435.8282244
+    },
+    "datetime": "2025-11-17 13:13:55"
+  },
+  {
+    "timestamp": 1763365450.1501555,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:14:10"
+  },
+  {
+    "timestamp": 1763365456.5110497,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763365456.5085297
+    },
+    "datetime": "2025-11-17 13:14:16"
+  },
+  {
+    "timestamp": 1763365471.2017179,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:14:31"
+  },
+  {
+    "timestamp": 1763365474.157864,
+    "user_id": 6580698563,
+    "action": "tasks_list_viewed",
+    "data": {
+      "available_tasks": 4
+    },
+    "datetime": "2025-11-17 13:14:34"
+  },
+  {
+    "timestamp": 1763365535.0338082,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763365535.0327628
+    },
+    "datetime": "2025-11-17 13:15:35"
+  },
+  {
+    "timestamp": 1763365553.0941105,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8213433040:AAFk1rWMQw0eAOeIGrGO7BaHYiP7VfL_tQs/getMe (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000025978CA87D0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    "datetime": "2025-11-17 13:15:53"
+  },
+  {
+    "timestamp": 1763365568.142385,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8213433040:AAFk1rWMQw0eAOeIGrGO7BaHYiP7VfL_tQs/getMe (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000025978C87F10>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    "datetime": "2025-11-17 13:16:08"
+  },
+  {
+    "timestamp": 1763365583.189316,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8213433040:AAFk1rWMQw0eAOeIGrGO7BaHYiP7VfL_tQs/getMe (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000025978CC8310>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    "datetime": "2025-11-17 13:16:23"
+  },
+  {
+    "timestamp": 1763365598.233293,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8213433040:AAFk1rWMQw0eAOeIGrGO7BaHYiP7VfL_tQs/getMe (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x0000025978CD47D0>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    "datetime": "2025-11-17 13:16:38"
+  },
+  {
+    "timestamp": 1763365622.2305262,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:17:02"
+  },
+  {
+    "timestamp": 1763365622.454991,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:17:02"
+  },
+  {
+    "timestamp": 1763365623.8031535,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:17:03"
+  },
+  {
+    "timestamp": 1763365646.1642501,
+    "user_id": 6580698563,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 1
+    },
+    "datetime": "2025-11-17 13:17:26"
+  },
+  {
+    "timestamp": 1763365655.270608,
+    "user_id": 0,
+    "action": "bot_error",
+    "data": {
+      "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    "datetime": "2025-11-17 13:17:35"
+  },
+  {
+    "timestamp": 1763365677.300144,
+    "user_id": 6580698563,
+    "action": "category_selected",
+    "data": {
+      "category": "General",
+      "tasks_count": 4
+    },
+    "datetime": "2025-11-17 13:17:57"
+  },
+  {
+    "timestamp": 1763366029.9310448,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366029.9295335
+    },
+    "datetime": "2025-11-17 13:23:49"
+  },
+  {
+    "timestamp": 1763366068.7619865,
+    "user_id": 5367009004,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:24:28"
+  },
+  {
+    "timestamp": 1763366076.0094771,
+    "user_id": 5367009004,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 1
+    },
+    "datetime": "2025-11-17 13:24:36"
+  },
+  {
+    "timestamp": 1763366084.3731828,
+    "user_id": 5367009004,
+    "action": "category_selected",
+    "data": {
+      "category": "General",
+      "tasks_count": 3
+    },
+    "datetime": "2025-11-17 13:24:44"
+  },
+  {
+    "timestamp": 1763366090.6216059,
+    "user_id": 5367009004,
+    "action": "task_selected",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-17 13:24:50"
+  },
+  {
+    "timestamp": 1763366095.5588408,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366095.5557837
+    },
+    "datetime": "2025-11-17 13:24:55"
+  },
+  {
+    "timestamp": 1763366109.4750824,
+    "user_id": 5367009004,
+    "action": "screenshot_submitted",
+    "data": {
+      "task_id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8"
+    },
+    "datetime": "2025-11-17 13:25:09"
+  },
+  {
+    "timestamp": 1763366116.0811582,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366116.0779798
+    },
+    "datetime": "2025-11-17 13:25:16"
+  },
+  {
+    "timestamp": 1763366148.4785526,
+    "user_id": 6580698563,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 1
+    },
+    "datetime": "2025-11-17 13:25:48"
+  },
+  {
+    "timestamp": 1763366149.8769505,
+    "user_id": 6580698563,
+    "action": "category_selected",
+    "data": {
+      "category": "General",
+      "tasks_count": 4
+    },
+    "datetime": "2025-11-17 13:25:49"
+  },
+  {
+    "timestamp": 1763366171.427435,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366171.426424
+    },
+    "datetime": "2025-11-17 13:26:11"
+  },
+  {
+    "timestamp": 1763366184.0394807,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366184.0384734
+    },
+    "datetime": "2025-11-17 13:26:24"
+  },
+  {
+    "timestamp": 1763366198.2073705,
+    "user_id": 5367009004,
+    "action": "balance_checked",
+    "data": {
+      "balance": 8.5
+    },
+    "datetime": "2025-11-17 13:26:38"
+  },
+  {
+    "timestamp": 1763366199.278568,
+    "user_id": 5367009004,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 1
+    },
+    "datetime": "2025-11-17 13:26:39"
+  },
+  {
+    "timestamp": 1763366202.7055564,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366202.703912
+    },
+    "datetime": "2025-11-17 13:26:42"
+  },
+  {
+    "timestamp": 1763366218.9063993,
+    "user_id": 6580698563,
+    "action": "category_selected",
+    "data": {
+      "category": "General",
+      "tasks_count": 4
+    },
+    "datetime": "2025-11-17 13:26:58"
+  },
+  {
+    "timestamp": 1763366235.3187082,
+    "user_id": 5367009004,
+    "action": "category_selected",
+    "data": {
+      "category": "General",
+      "tasks_count": 2
+    },
+    "datetime": "2025-11-17 13:27:15"
+  },
+  {
+    "timestamp": 1763366240.316597,
+    "user_id": 5367009004,
+    "action": "task_selected",
+    "data": {
+      "task_id": "24234ed5-a721-4f3b-b8d3-c73c3150ddf4"
+    },
+    "datetime": "2025-11-17 13:27:20"
+  },
+  {
+    "timestamp": 1763366245.2478049,
+    "user_id": 5367009004,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 1
+    },
+    "datetime": "2025-11-17 13:27:25"
+  },
+  {
+    "timestamp": 1763366246.9661593,
+    "user_id": 5367009004,
+    "action": "category_selected",
+    "data": {
+      "category": "General",
+      "tasks_count": 2
+    },
+    "datetime": "2025-11-17 13:27:26"
+  },
+  {
+    "timestamp": 1763366249.2118213,
+    "user_id": 5367009004,
+    "action": "task_selected",
+    "data": {
+      "task_id": "bf4cb4eb-3ed7-4f16-be15-8c14f31ddc66"
+    },
+    "datetime": "2025-11-17 13:27:29"
+  },
+  {
+    "timestamp": 1763366284.4069986,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366284.405472
+    },
+    "datetime": "2025-11-17 13:28:04"
+  },
+  {
+    "timestamp": 1763366317.8764086,
+    "user_id": 6580698563,
+    "action": "text_message",
+    "data": {
+      "text": "Test"
+    },
+    "datetime": "2025-11-17 13:28:37"
+  },
+  {
+    "timestamp": 1763366355.8647199,
+    "user_id": 6580698563,
+    "action": "text_message",
+    "data": {
+      "text": "test"
+    },
+    "datetime": "2025-11-17 13:29:15"
+  },
+  {
+    "timestamp": 1763366360.9540305,
+    "user_id": 6580698563,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 13:29:20"
+  },
+  {
+    "timestamp": 1763366409.8976996,
+    "user_id": 6580698563,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 1
+    },
+    "datetime": "2025-11-17 13:30:09"
+  },
+  {
+    "timestamp": 1763366519.2368867,
+    "user_id": 5367009004,
+    "action": "admin_task_added",
+    "data": {
+      "task_id": "a219213e-9ff6-4918-ae0a-911378e7fd1b",
+      "title": "Join Now",
+      "category": "Download & Register",
+      "reward": 1.0,
+      "notified": 17
+    },
+    "datetime": "2025-11-17 13:31:59"
+  },
+  {
+    "timestamp": 1763366519.8072715,
+    "user_id": 6580698563,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 2
+    },
+    "datetime": "2025-11-17 13:31:59"
+  },
+  {
+    "timestamp": 1763366560.1044316,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366560.1029277
+    },
+    "datetime": "2025-11-17 13:32:40"
+  },
+  {
+    "timestamp": 1763366574.239524,
+    "user_id": 6580698563,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 2
+    },
+    "datetime": "2025-11-17 13:32:54"
+  },
+  {
+    "timestamp": 1763366575.9819884,
+    "user_id": 8331662927,
+    "action": "balance_checked",
+    "data": {
+      "balance": 1.5
+    },
+    "datetime": "2025-11-17 13:32:55"
+  },
+  {
+    "timestamp": 1763366585.5576034,
+    "user_id": 8331662927,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 2
+    },
+    "datetime": "2025-11-17 13:33:05"
+  },
+  {
+    "timestamp": 1763366596.4249668,
+    "user_id": 6580698563,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 2
+    },
+    "datetime": "2025-11-17 13:33:16"
+  },
+  {
+    "timestamp": 1763366598.0016778,
+    "user_id": 6580698563,
+    "action": "category_selected",
+    "data": {
+      "category": "Join Telegram Channel",
+      "tasks_count": 2
+    },
+    "datetime": "2025-11-17 13:33:18"
+  },
+  {
+    "timestamp": 1763366602.4153697,
+    "user_id": 6580698563,
+    "action": "category_selected",
+    "data": {
+      "category": "Download & Register",
+      "tasks_count": 3
+    },
+    "datetime": "2025-11-17 13:33:22"
+  },
+  {
+    "timestamp": 1763366701.8668613,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366701.8653545
+    },
+    "datetime": "2025-11-17 13:35:01"
+  },
+  {
+    "timestamp": 1763366739.546575,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366739.5445528
+    },
+    "datetime": "2025-11-17 13:35:39"
+  },
+  {
+    "timestamp": 1763366967.110876,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366967.1098785
+    },
+    "datetime": "2025-11-17 13:39:27"
+  },
+  {
+    "timestamp": 1763366978.391444,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763366978.3898711
+    },
+    "datetime": "2025-11-17 13:39:38"
+  },
+  {
+    "timestamp": 1763367008.554215,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763367008.5517113
+    },
+    "datetime": "2025-11-17 13:40:08"
+  },
+  {
+    "timestamp": 1763367080.2039478,
+    "user_id": 6580698563,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 2
+    },
+    "datetime": "2025-11-17 13:41:20"
+  },
+  {
+    "timestamp": 1763367082.4691052,
+    "user_id": 6580698563,
+    "action": "category_selected",
+    "data": {
+      "category": "Download & Register",
+      "tasks_count": 3
+    },
+    "datetime": "2025-11-17 13:41:22"
+  },
+  {
+    "timestamp": 1763367930.13787,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763367930.1337576
+    },
+    "datetime": "2025-11-17 13:55:30"
+  },
+  {
+    "timestamp": 1763368069.1483166,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763368069.146796
+    },
+    "datetime": "2025-11-17 13:57:49"
+  },
+  {
+    "timestamp": 1763368306.8739572,
+    "user_id": 0,
+    "action": "bot_started",
+    "data": {
+      "timestamp": 1763368306.8729548
+    },
+    "datetime": "2025-11-17 14:01:46"
+  },
+  {
+    "timestamp": 1763368345.2615933,
+    "user_id": 6817352658,
+    "action": "start_command",
+    "data": {},
+    "datetime": "2025-11-17 14:02:25"
+  },
+  {
+    "timestamp": 1763368349.5752933,
+    "user_id": 6817352658,
+    "action": "tasks_categories_viewed",
+    "data": {
+      "categories": 2
+    },
+    "datetime": "2025-11-17 14:02:29"
+  },
+  {
+    "timestamp": 1763368364.503263,
+    "user_id": 6817352658,
+    "action": "category_selected",
+    "data": {
+      "category": "Download & Register",
+      "tasks_count": 3
+    },
+    "datetime": "2025-11-17 14:02:44"
+  },
+  {
+    "timestamp": 1763368371.2536032,
+    "user_id": 6817352658,
+    "action": "category_selected",
+    "data": {
+      "category": "Join Telegram Channel",
+      "tasks_count": 2
+    },
+    "datetime": "2025-11-17 14:02:51"
+  }
+]

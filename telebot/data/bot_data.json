@@ -1,0 +1,113 @@
+{
+  "tasks": [
+    {
+      "title": "Join & Solve Your Doubts",
+      "description": "You can clear your doubts by joining this chat group.",
+      "link": "https://t.me/+Wd3XHBMKgCI4N2Q9",
+      "reward": 0.5,
+      "quantity": 10000,
+      "id": "4b890222-91dc-487e-833e-041ccb5acbc7",
+      "active": true,
+      "completed_count": 11,
+      "created_at": 1762363002.1514275,
+      "category": "Join Telegram Channel"
+    },
+    {
+      "title": "Join Now ",
+      "description": "You can join this channel to know how this bot works.",
+      "link": "https://t.me/referandearn2009",
+      "reward": 0.5,
+      "quantity": 10000,
+      "id": "0ba4c3c1-63c7-4c91-9a7d-2faadc0152e8",
+      "active": true,
+      "completed_count": 4,
+      "created_at": 1762405562.749576,
+      "category": "Join Telegram Channel"
+    },
+    {
+      "title": "Join CatCash and start earning rewards! ",
+      "description": "Join CatCash and start earning rewards! \n\n• Complete tasks and earn real money.\n• Refer friends and earn the same amount they earn from offers (excluding special offers).\n• Get daily check-ins to boost your earnings.\n• Receive surprise Lifafas with bonus rewards.\n\nMust use my referral code: G29K9UZ4T",
+      "link": "https://referral.thecatcash.com/G29K9UZ4T",
+      "reward": 0.5,
+      "quantity": 10000,
+      "id": "24234ed5-a721-4f3b-b8d3-c73c3150ddf4",
+      "active": true,
+      "completed_count": 0,
+      "created_at": 1763095183.75757,
+      "category": "Download & Register"
+    },
+    {
+      "title": "Hey! Download money earning app MoneyHi",
+      "description": "Download and must use my referral code for completing task - \"VKNC29\"",
+      "link": "https://duo.moneyhi.co/referral?userId=9ec4d67d-c5e0-4f4c-9c5b-86b8ed2be060&userName=Lofi+Escape&referralCode=VKNC29",
+      "reward": 0.5,
+      "quantity": 10000,
+      "id": "bf4cb4eb-3ed7-4f16-be15-8c14f31ddc66",
+      "active": true,
+      "completed_count": 0,
+      "created_at": 1763099304.0536807,
+      "category": "Download & Register"
+    },
+    {
+      "title": "Join Now",
+      "description": "Join Now",
+      "link": "https://referral.thecatcash.com/G29K9UZ4T",
+      "reward": 1.0,
+      "quantity": 10000,
+      "category": "Download & Register",
+      "id": "a219213e-9ff6-4918-ae0a-911378e7fd1b",
+      "active": true,
+      "completed_count": 0,
+      "created_at": 1763366508.705251
+    }
+  ],
+  "withdrawal_requests": [
+    {
+      "id": "90766dce-4328-41c7-9a9d-6c06f001d96a",
+      "user_id": 5367009004,
+      "amount": 6.5,
+      "upi_id": "9876543210@paytm",
+      "timestamp": 1762488278.9766746,
+      "status": "approved",
+      "processed_at": 1762488281.7166286
+    },
+    {
+      "id": "614049f7-9bb8-404f-b39d-1d5f056ef3c5",
+      "user_id": 8070266485,
+      "amount": 6.0,
+      "upi_id": "7009610898@fam",
+      "timestamp": 1762531383.5917766,
+      "status": "approved",
+      "processed_at": 1762531569.2121918
+    }
+  ],
+  "settings": {
+    "min_withdrawal": 10.0,
+    "referral_reward": 0.5,
+    "default_welcome_bonus": 1.0,
+    "referral_milestone_count": 20,
+    "referral_milestone_reward": 10
+  },
+  "required_channels": [
+    {
+      "username": "DailyEarnNetwork",
+      "name": "𝐃𝐚𝐢𝐥𝐲 𝐄𝐚𝐫𝐧𝐢𝐧𝐠 𝐍𝐞𝐭𝐰𝐨𝐫𝐤",
+      "added_at": 1762692408.8157184
+    },
+    {
+      "username": "yonogameswithnarayan",
+      "name": "𝐉𝐨𝐢𝐧 & 𝐄𝐚𝐫𝐧 💰",
+      "added_at": 1762698421.6902306
+    },
+    {
+      "username": "referandearn2009",
+      "name": "𝐉𝐨𝐢𝐧 & 𝐄𝐚𝐫𝐧 💰",
+      "added_at": 1762867664.18726
+    },
+    {
+      "username": "RewardVault",
+      "name": "RewardVault",
+      "added_at": 1763092984.171427
+    }
+  ]
+}
