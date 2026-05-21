@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#!/usr/bin/env python3
 import json
 import os
 import shutil
@@ -840,6 +839,11 @@ def keep_alive():
         f"🌐 Keep-alive server started on 0.0.0.0:{os.environ.get('PORT', '5000')}"
     )
 
+
+if not BOT_TOKEN:
+    raise RuntimeError(
+        "BOT_TOKEN is not set. Please add BOT_TOKEN to your environment variables or .env file."
+    )
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
