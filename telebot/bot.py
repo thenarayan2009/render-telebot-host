@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
 import json
 import os
 import shutil
@@ -12,10 +13,13 @@ import requests
 import telebot
 from flask import Flask
 from telebot import types
+from dotenv import load_dotenv
 
-BOT_TOKEN = "8213433040:AAFk1rWMQw0eAOeIGrGO7BaHYiP7VfL_tQs"
-ADMIN_ID = 5367009004  # Primary admin ID
-ADMIN_IDS = [5367009004, 6580698563]  # List of admin user IDs
+load_dotenv()
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "5367009004"))
+ADMIN_IDS = [int(x.strip()) for x in os.environ.get("ADMIN_IDS", "5367009004,6580698563").split(",") if x.strip()]
 
 BOT_USERNAME = os.getenv("BOT_USERNAME", "Tasktoearnmoneybot")
 MINIMUM_WITHDRAWAL = 10
@@ -340,6 +344,9 @@ def user_exists(user_id):
 
 
 def create_user(user_id, first_name, username, referrer_id=None):
+    # Do not create user accounts for admins
+    if is_admin(user_id):
+        return
     users_data = get_all_users_data()
     bot_data = get_bot_data()
     settings = bot_data.get("settings", {})
@@ -706,6 +713,73 @@ def create_category_keyboard(categories):
     return keyboard
 
 
+def refresh_admin_panel(admin_chat_id, message_id):
+    keyboard = types.InlineKeyboardMarkup(row_width=2)
+    btn1 = types.InlineKeyboardButton(
+        "💸 Withdrawal Requests", callback_data="admin_withdrawals"
+    )
+    btn2 = types.InlineKeyboardButton("🎯 Manage Tasks", callback_data="admin_tasks")
+    btn3 = types.InlineKeyboardButton("📊 User Statistics", callback_data="admin_stats")
+    btn4 = types.InlineKeyboardButton(
+        "💰 Adjust Balance", callback_data="admin_adjust_balance"
+    )
+    btn5 = types.InlineKeyboardButton(
+        "🚫 Block/Unblock User", callback_data="admin_block_user"
+    )
+    btn6 = types.InlineKeyboardButton(
+        "📨 Message Center", callback_data="admin_message_center"
+    )
+    btn7 = types.InlineKeyboardButton(
+        "🔗 Referral Settings", callback_data="admin_referral_settings"
+    )
+    btn8 = types.InlineKeyboardButton(
+        "⚙️ Bot Settings", callback_data="admin_global_settings"
+    )
+    btn9 = types.InlineKeyboardButton(
+        "📢 Manage Channels", callback_data="admin_channels"
+    )
+    refresh_btn = types.InlineKeyboardButton(
+        "🔄 Refresh Panel", callback_data="admin_refresh"
+    )
+
+    keyboard.add(btn1, btn2)
+    keyboard.add(btn3, btn4)
+    keyboard.add(btn5, btn6)
+    keyboard.add(btn7, btn8)
+    keyboard.add(btn9)
+    keyboard.add(refresh_btn)
+
+    admin_msg = """🔧 **Admin Panel**
+
+Select an option:
+
+💸 Withdrawal Requests - Manage user withdrawals
+🎯 Manage Tasks - Add/Edit tasks
+📊 User Statistics - View all user stats
+💰 Adjust Balance - Add/deduct user balance
+🚫 Block/Unblock - Block or unblock users
+📨 Message Center - Broadcast messages
+🔗 Referral Settings - Per-user referral settings
+⚙️ Bot Settings - Global bot settings
+📢 Manage Channels - Add/Remove required channels
+🔄 Refresh Panel - Refresh this panel"""
+
+    try:
+        bot.edit_message_text(
+            admin_msg,
+            admin_chat_id,
+            message_id,
+            reply_markup=keyboard,
+            parse_mode="Markdown",
+        )
+    except Exception:
+        # Fallback: send a new admin panel message
+        try:
+            bot.send_message(admin_chat_id, admin_msg, reply_markup=keyboard, parse_mode="Markdown")
+        except Exception:
+            pass
+
+
 app = Flask(__name__)
 
 
@@ -780,6 +854,11 @@ def start_command(message):
             message,
             "🚫 आप इस बॉट का उपयोग नहीं कर सकते / You are blocked from using this bot",
         )
+        return
+
+    # If admin uses /start, open admin panel instead of user menu
+    if is_admin(user_id):
+        admin_panel(message)
         return
 
     # Extract referrer_id from command if present (for new users)
@@ -2284,6 +2363,8 @@ def show_user_edit_options(chat_id, message_id, user_id):
 )
 def handle_admin_input(message):
     admin_id = message.from_user.id
+    # allow existing code below that references ADMIN_ID to use the current admin's id
+    ADMIN_ID = admin_id
     state = admin_state.get(admin_id)
     if not state:
         return
@@ -2563,9 +2644,14 @@ Choose action:"""
             log_activity(
                 ADMIN_ID, "admin_edit_global_min_withdrawal", {"amount": amount}
             )
+            # refresh admin panel in-place
+            try:
+                refresh_admin_panel(admin_id, state.get("message_id"))
+            except Exception:
+                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount. कृपया सही राशि enter करें।")
-        del admin_state[ADMIN_ID]
+        del admin_state[admin_id]
 
     elif action == "edit_global_ref_reward":
         try:
@@ -2592,9 +2678,13 @@ Choose action:"""
                 "admin_edit_global_ref_reward",
                 {"amount": amount, "notified": success},
             )
+            try:
+                refresh_admin_panel(admin_id, state.get("message_id"))
+            except Exception:
+                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount. कृपया सही राशि enter करें।")
-        del admin_state[ADMIN_ID]
+        del admin_state[admin_id]
 
     elif action == "edit_global_milestone_count":
         try:
@@ -2621,9 +2711,13 @@ Choose action:"""
                 "admin_edit_global_milestone_count",
                 {"count": count, "notified": success},
             )
+            try:
+                refresh_admin_panel(admin_id, state.get("message_id"))
+            except Exception:
+                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid number. कृपया सही संख्या enter करें।")
-        del admin_state[ADMIN_ID]
+        del admin_state[admin_id]
 
     elif action == "edit_global_milestone_reward":
         try:
@@ -2635,7 +2729,7 @@ Choose action:"""
             save_bot_data(bot_data)
             bot.send_message(
                 ADMIN_ID,
-                f"✅ सभी users के लिए Milestone Reward ₹{amount} set हो गया!\n\नअब milestone complete होने पर यह bonus मिलेगा।",
+                f"✅ सभी users के लिए Milestone Reward ₹{amount} set हो गया!\n\nअब milestone complete होने पर यह bonus मिलेगा।",
             )
 
             msg_text = f"🔔 **Milestone Reward Updated!**\n\n🏆 New bonus: ₹{amount}\n\n🔗 Start referring: /refer"
@@ -2650,9 +2744,13 @@ Choose action:"""
                 "admin_edit_global_milestone_reward",
                 {"amount": amount, "notified": success},
             )
+            try:
+                refresh_admin_panel(admin_id, state.get("message_id"))
+            except Exception:
+                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount. कृपया सही राशि enter करें।")
-        del admin_state[ADMIN_ID]
+        del admin_state[admin_id]
 
     elif action == "edit_global_welcome_bonus":
         try:
@@ -2679,9 +2777,13 @@ Choose action:"""
                 "admin_edit_global_welcome_bonus",
                 {"amount": amount, "notified": success},
             )
+            try:
+                refresh_admin_panel(admin_id, state.get("message_id"))
+            except Exception:
+                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount. कृपया सही राशि enter करें।")
-        del admin_state[ADMIN_ID]
+        del admin_state[admin_id]
 
     elif action == "msg_single_get_user":
         try:
@@ -3191,9 +3293,13 @@ def handle_check_membership(call):
                 )
 
             # Create new user with referral
-            create_user(
-                user_id, call.from_user.first_name, call.from_user.username, referrer_id
-            )
+            if not is_admin(user_id):
+                create_user(
+                    user_id, call.from_user.first_name, call.from_user.username, referrer_id
+                )
+            else:
+                # Don't create admin as a regular user
+                bot.send_message(user_id, "You're using an admin account.")
 
             # Reward referrer
             add_user_balance(referrer_id, referral_reward)
