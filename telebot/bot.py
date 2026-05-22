@@ -779,6 +779,14 @@ Select an option:
             pass
 
 
+def complete_admin_action(admin_id, state):
+    try:
+        refresh_admin_panel(admin_id, state.get("message_id"))
+    except Exception:
+        pass
+    admin_state.pop(admin_id, None)
+
+
 app = Flask(__name__)
 
 
@@ -846,6 +854,7 @@ if not BOT_TOKEN:
     )
 
 bot = telebot.TeleBot(BOT_TOKEN)
+print(f"Loaded bot with ADMIN_ID={ADMIN_ID}, ADMIN_IDS={ADMIN_IDS}")
 
 initialize_data_files()
 
@@ -1014,6 +1023,9 @@ Select an option:
 def handle_admin_callbacks(call):
     if not is_admin(call.from_user.id):
         return
+
+    admin_id = call.from_user.id
+    ADMIN_ID = admin_id
 
     if call.data == "admin_users_list":
         users_data = get_all_users_data()
@@ -2385,7 +2397,7 @@ def handle_admin_input(message):
                 bot.send_message(ADMIN_ID, f"❌ User ID {user_id} not found")
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "set_ref_reward":
         user_id = state["user_id"]
@@ -2415,7 +2427,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "set_milestone_count":
         user_id = state["user_id"]
@@ -2444,7 +2456,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid number")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "set_milestone_reward":
         user_id = state["user_id"]
@@ -2474,7 +2486,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "set_welcome_bonus":
         user_id = state["user_id"]
@@ -2503,7 +2515,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "add_balance":
         user_id = state["user_id"]
@@ -2518,7 +2530,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "deduct_balance":
         user_id = state["user_id"]
@@ -2533,7 +2545,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "search_user_for_referral":
         try:
@@ -2545,7 +2557,7 @@ def handle_admin_input(message):
                 bot.send_message(ADMIN_ID, f"❌ User ID {user_id} not found")
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "search_user_for_balance":
         try:
@@ -2586,7 +2598,7 @@ Choose action:"""
                 bot.send_message(ADMIN_ID, f"❌ User ID {user_id} not found")
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "search_user_for_block":
         try:
@@ -2631,7 +2643,7 @@ Choose action:"""
                 bot.send_message(ADMIN_ID, f"❌ User ID {user_id} not found")
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "edit_global_min_withdrawal":
         try:
@@ -2808,10 +2820,10 @@ Choose action:"""
                     ADMIN_ID,
                     f"❌ User ID {user_id} not found. कृपया सही User ID enter करें।",
                 )
-                del admin_state[ADMIN_ID]
+                complete_admin_action(admin_id, state)
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID. कृपया सही number enter करें।")
-            del admin_state[ADMIN_ID]
+            complete_admin_action(admin_id, state)
 
     elif action == "msg_single_send":
         user_id = state["user_id"]
@@ -2834,7 +2846,7 @@ Choose action:"""
             )
         except Exception as e:
             bot.send_message(ADMIN_ID, f"❌ Message send करने में error आई:\n{str(e)}")
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "msg_broadcast_get_message":
         message_text = message.text.strip()
@@ -2891,7 +2903,7 @@ Choose action:"""
                 "message": message_text[:100],
             },
         )
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "task_add_title":
         state["task_data"]["title"] = message.text.strip()
@@ -2970,7 +2982,7 @@ Choose action:"""
                 "notified": success,
             },
         )
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "rename_category":
         old_category = state["old_category"]
@@ -2979,12 +2991,12 @@ Choose action:"""
         
         if not new_category:
             bot.send_message(ADMIN_ID, "❌ Category name cannot be empty!")
-            del admin_state[ADMIN_ID]
+            complete_admin_action(admin_id, state)
             return
         
         if old_category == new_category:
             bot.send_message(ADMIN_ID, "❌ New name is same as old name!")
-            del admin_state[ADMIN_ID]
+            complete_admin_action(admin_id, state)
             return
         
         bot_data = get_bot_data()
@@ -3013,7 +3025,7 @@ Choose action:"""
                 "tasks_updated": renamed_count,
             },
         )
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "channel_add_details":
         try:
@@ -3102,7 +3114,7 @@ Available categories:
                     {"task_id": task_id, "field": "title", "new_value": new_title},
                 )
                 break
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "task_edit_desc":
         task_id = state["task_id"]
@@ -3123,7 +3135,7 @@ Available categories:
                     {"task_id": task_id, "field": "description"},
                 )
                 break
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "task_edit_link":
         task_id = state["task_id"]
@@ -3140,7 +3152,7 @@ Available categories:
                     ADMIN_ID, "admin_task_edited", {"task_id": task_id, "field": "link"}
                 )
                 break
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
     elif action == "task_edit_reward":
         try:
@@ -3168,12 +3180,12 @@ Available categories:
                         },
                     )
                     break
-            del admin_state[ADMIN_ID]
+            complete_admin_action(admin_id, state)
         except:
             bot.send_message(
                 ADMIN_ID, "❌ Invalid reward amount. कृपया सही राशि enter करें।"
             )
-            del admin_state[ADMIN_ID]
+            complete_admin_action(admin_id, state)
 
     elif action == "task_edit_qty":
         try:
@@ -3197,10 +3209,10 @@ Available categories:
                         {"task_id": task_id, "field": "quantity", "new_value": new_qty},
                     )
                     break
-            del admin_state[ADMIN_ID]
+            complete_admin_action(admin_id, state)
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid quantity. कृपया सही संख्या enter करें।")
-            del admin_state[ADMIN_ID]
+            complete_admin_action(admin_id, state)
 
     elif action == "task_edit_category":
         task_id = state["task_id"]
@@ -3209,7 +3221,7 @@ Available categories:
         
         if not new_category:
             bot.send_message(ADMIN_ID, "❌ Category name cannot be empty!")
-            del admin_state[ADMIN_ID]
+            complete_admin_action(admin_id, state)
             return
         
         bot_data = get_bot_data()
@@ -3230,7 +3242,7 @@ Available categories:
                     {"task_id": task_id, "field": "category", "new_value": new_category},
                 )
                 break
-        del admin_state[ADMIN_ID]
+        complete_admin_action(admin_id, state)
 
 
 @bot.message_handler(
