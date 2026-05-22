@@ -13,9 +13,12 @@ import telebot
 from flask import Flask
 from telebot import types
 from dotenv import load_dotenv
+from urllib.parse import quote_plus, unquote_plus
 
 load_dotenv()
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 ADMIN_ID = int(os.environ.get("ADMIN_ID", "5367009004"))
 ADMIN_IDS = [int(x.strip()) for x in os.environ.get("ADMIN_IDS", "5367009004,6580698563").split(",") if x.strip()]
@@ -26,12 +29,12 @@ REFERRAL_REWARD = 2
 REFERRAL_MILESTONE_COUNT = 5
 REFERRAL_MILESTONE_REWARD = 10
 DEFAULT_WELCOME_BONUS = 5
-USERS_DATA_FILE = "data/users_data.json"
-BOT_DATA_FILE = "data/bot_data.json"
-BLOCKED_USERS_FILE = "data/blocked_users.json"
-ACTIVITY_LOG_FILE = "data/activity_log.json"
-TASK_SUBMISSIONS_FILE = "data/task_submissions.json"
-BACKUP_DIR = "data/backups"
+USERS_DATA_FILE = os.path.join(DATA_DIR, "users_data.json")
+BOT_DATA_FILE = os.path.join(DATA_DIR, "bot_data.json")
+BLOCKED_USERS_FILE = os.path.join(DATA_DIR, "blocked_users.json")
+ACTIVITY_LOG_FILE = os.path.join(DATA_DIR, "activity_log.json")
+TASK_SUBMISSIONS_FILE = os.path.join(DATA_DIR, "task_submissions.json")
+BACKUP_DIR = os.path.join(DATA_DIR, "backups")
 MAX_BACKUPS = 50
 
 admin_state = {}
@@ -199,8 +202,8 @@ def is_admin(user_id):
 
 
 def ensure_data_directory():
-    if not os.path.exists("data"):
-        os.makedirs("data")
+    if not os.path.exists(DATA_DIR):
+        os.makedirs(DATA_DIR)
     if not os.path.exists(BACKUP_DIR):
         os.makedirs(BACKUP_DIR)
 
@@ -326,6 +329,16 @@ def save_json_file(filepath, data):
     except Exception as e:
         print(f"❌ Save failed for {filepath}: {e}")
         return False
+
+
+def make_callback_data(prefix, value):
+    return f"{prefix}:{quote_plus(str(value))}"
+
+
+def parse_callback_data(data, prefix):
+    if data.startswith(prefix + ":"):
+        return unquote_plus(data.split(":", 1)[1])
+    return None
 
 
 def get_all_users_data():
@@ -705,7 +718,7 @@ def create_category_keyboard(categories):
         icon = category_icons.get(category, "📋")
         btn = types.InlineKeyboardButton(
             f"{icon} {category}", 
-            callback_data=f"category_{category}"
+            callback_data=make_callback_data("category", category)
         )
         keyboard.add(btn)
     
@@ -1203,7 +1216,7 @@ Choose message type:
         
         for cat in categories:
             btn = types.InlineKeyboardButton(
-                f"📝 Edit: {cat}", callback_data=f"admin_edit_category_{cat}"
+                f"📝 Edit: {cat}", callback_data=make_callback_data("admin_edit_category", cat)
             )
             keyboard.add(btn)
         
@@ -1218,8 +1231,8 @@ Choose message type:
             parse_mode="Markdown",
         )
 
-    elif call.data.startswith("admin_edit_category_"):
-        category = call.data.split("admin_edit_category_", 1)[1]
+    elif parse_callback_data(call.data, "admin_edit_category") is not None:
+        category = parse_callback_data(call.data, "admin_edit_category")
         tasks_in_cat = get_tasks_by_category(category)
         
         msg = f"📝 **Edit Category: {category}**\n\n"
@@ -1232,10 +1245,10 @@ Choose message type:
         keyboard = types.InlineKeyboardMarkup(row_width=1)
         
         rename_btn = types.InlineKeyboardButton(
-            "✏️ Rename Category", callback_data=f"admin_rename_category_{category}"
+            "✏️ Rename Category", callback_data=make_callback_data("admin_rename_category", category)
         )
         delete_btn = types.InlineKeyboardButton(
-            "🗑 Delete Category", callback_data=f"admin_delete_category_{category}"
+            "🗑 Delete Category", callback_data=make_callback_data("admin_delete_category", category)
         )
         back_btn = types.InlineKeyboardButton(
             "🔙 Back to Categories", callback_data="admin_manage_categories"
@@ -1253,8 +1266,8 @@ Choose message type:
             parse_mode="Markdown",
         )
 
-    elif call.data.startswith("admin_rename_category_"):
-        category = call.data.split("admin_rename_category_", 1)[1]
+    elif parse_callback_data(call.data, "admin_rename_category") is not None:
+        category = parse_callback_data(call.data, "admin_rename_category")
         msg = bot.edit_message_text(
             f"📝 **Rename Category**\n\nCurrent name: {category}\n\nEnter new category name:",
             call.message.chat.id,
@@ -1267,8 +1280,8 @@ Choose message type:
             "message_id": msg.message_id,
         }
 
-    elif call.data.startswith("admin_delete_category_"):
-        category = call.data.split("admin_delete_category_", 1)[1]
+    elif parse_callback_data(call.data, "admin_delete_category") is not None:
+        category = parse_callback_data(call.data, "admin_delete_category")
         tasks_in_cat = get_tasks_by_category(category)
         
         msg = f"🗑 **Delete Category: {category}**\n\n"
@@ -1280,13 +1293,13 @@ Choose message type:
         
         keyboard = types.InlineKeyboardMarkup(row_width=1)
         move_btn = types.InlineKeyboardButton(
-            "📂 Move to General", callback_data=f"admin_move_category_{category}"
+            "📂 Move to General", callback_data=make_callback_data("admin_move_category", category)
         )
         delete_all_btn = types.InlineKeyboardButton(
-            "🗑 Delete All Tasks", callback_data=f"admin_delete_all_category_{category}"
+            "🗑 Delete All Tasks", callback_data=make_callback_data("admin_delete_all_category", category)
         )
         cancel_btn = types.InlineKeyboardButton(
-            "❌ Cancel", callback_data=f"admin_edit_category_{category}"
+            "❌ Cancel", callback_data=make_callback_data("admin_edit_category", category)
         )
         
         keyboard.add(move_btn)
@@ -1301,10 +1314,11 @@ Choose message type:
             parse_mode="Markdown",
         )
 
-    elif call.data.startswith("admin_move_category_"):
-        category = call.data.split("admin_move_category_", 1)[1]
+    elif parse_callback_data(call.data, "admin_move_category") is not None:
+        category = parse_callback_data(call.data, "admin_move_category")
         bot_data = get_bot_data()
         tasks = bot_data.get("tasks", [])
+        moved_count = sum(1 for task in tasks if task.get("category") == category)
         
         # Move all tasks from this category to General
         for task in tasks:
@@ -1313,7 +1327,7 @@ Choose message type:
         
         save_bot_data(bot_data)
         
-        bot.answer_callback_query(call.id, f"✅ Moved {len([t for t in tasks if t.get('category') == 'General'])} tasks to General")
+        bot.answer_callback_query(call.id, f"✅ Moved {moved_count} tasks to General")
         
         # Go back to categories
         categories = get_task_categories()
@@ -1328,7 +1342,7 @@ Choose message type:
         
         for cat in categories:
             btn = types.InlineKeyboardButton(
-                f"📝 Edit: {cat}", callback_data=f"admin_edit_category_{cat}"
+                f"📝 Edit: {cat}", callback_data=make_callback_data("admin_edit_category", cat)
             )
             keyboard.add(btn)
         
@@ -1343,8 +1357,8 @@ Choose message type:
             parse_mode="Markdown",
         )
 
-    elif call.data.startswith("admin_delete_all_category_"):
-        category = call.data.split("admin_delete_all_category_", 1)[1]
+    elif parse_callback_data(call.data, "admin_delete_all_category") is not None:
+        category = parse_callback_data(call.data, "admin_delete_all_category")
         bot_data = get_bot_data()
         tasks = bot_data.get("tasks", [])
         
@@ -1370,7 +1384,7 @@ Choose message type:
         
         for cat in categories:
             btn = types.InlineKeyboardButton(
-                f"📝 Edit: {cat}", callback_data=f"admin_edit_category_{cat}"
+                f"📝 Edit: {cat}", callback_data=make_callback_data("admin_edit_category", cat)
             )
             keyboard.add(btn)
         
@@ -3468,11 +3482,11 @@ def tasks_command(message):
     log_activity(user_id, "tasks_categories_viewed", {"categories": len(categories)})
 
 
-@bot.callback_query_handler(func=lambda call: call.data.startswith("category_"))
+@bot.callback_query_handler(func=lambda call: call.data.startswith("category:"))
 def handle_category_selection(call):
     user_id = call.from_user.id
     user_language = get_user_language(user_id)
-    category = call.data.split("category_", 1)[1]
+    category = parse_callback_data(call.data, "category")
     
     if is_user_blocked(user_id):
         bot.answer_callback_query(call.id, get_message(user_language, "user_blocked"))
