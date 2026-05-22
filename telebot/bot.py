@@ -882,10 +882,8 @@ def start_command(message):
         )
         return
 
-    # If admin uses /start, open admin panel instead of user menu
-    if is_admin(user_id):
-        admin_panel(message)
-        return
+    # Admin users will see the normal menu plus an Admin Panel button
+    # This allows easy access without typing /admin.
 
     # Extract referrer_id from command if present (for new users)
     referrer_id = None
@@ -954,6 +952,9 @@ To use this bot, please join the following channels:
     keyboard.add(btn1, btn2)
     keyboard.add(btn3, btn4)
     keyboard.add(btn5, btn6)
+    if is_admin(user_id):
+        admin_shortcut_btn = types.KeyboardButton("⚙️ Admin Panel")
+        keyboard.add(admin_shortcut_btn)
 
     bot_data = get_bot_data()
     settings = bot_data.get("settings", {})
@@ -970,6 +971,12 @@ To use this bot, please join the following channels:
     )
     bot.reply_to(message, welcome_msg, reply_markup=keyboard)
     log_activity(user_id, "start_command", {})
+
+
+@bot.message_handler(func=lambda message: message.text == "⚙️ Admin Panel")
+def admin_shortcut(message):
+    if is_admin(message.from_user.id):
+        admin_panel(message)
 
 
 @bot.message_handler(commands=["admin"])
@@ -1028,7 +1035,10 @@ Select an option:
 🔄 Refresh Panel - Refresh this panel"""
 
     bot.send_message(
-        message.from_user.id, admin_msg, reply_markup=keyboard, parse_mode="Markdown"
+        message.from_user.id,
+        admin_msg,
+        reply_markup=types.ReplyKeyboardRemove(),
+        parse_mode="Markdown",
     )
 
 
@@ -2245,8 +2255,11 @@ def show_users_page(chat_id, message_id, page, per_page):
         user_name = user_data.get("first_name", "Unknown")
         balance = user_data.get("balance", 0)
         tasks = len(user_data.get("completed_tasks", []))
+        referrals = user_data.get("referrals", 0)
+        username = user_data.get("username")
+        username_display = f"@{username}" if username else "N/A"
 
-        btn_text = f"{user_name} (ID: {user_id}) - ₹{balance} | {tasks} tasks"
+        btn_text = f"{user_name} | {username_display} | ₹{balance} | {tasks} tasks | {referrals} refs"
         btn = types.InlineKeyboardButton(
             btn_text, callback_data=f"admin_view_user_{user_id}"
         )
@@ -2317,23 +2330,46 @@ def show_user_details(chat_id, message_id, user_id):
         "%Y-%m-%d %H:%M"
     )
 
+    username_value = user_data.get("username")
+    username_display = f"@{username_value}" if username_value else "N/A"
+    blocked_status = "🚫 Blocked" if is_user_blocked(user_id) else "✅ Active"
+
+    current_task_id = user_data.get("current_task")
+    current_task_title = "None"
+    if current_task_id:
+        task = next(
+            (t for t in bot_data.get("tasks", []) if t.get("id") == current_task_id),
+            None,
+        )
+        current_task_title = (
+            f"{task.get('title')} (ID: {current_task_id})"
+            if task
+            else f"Unknown Task (ID: {current_task_id})"
+        )
+
+    completed_count = len(user_data.get("completed_tasks", []))
+    referred_by = user_data.get("referred_by")
+    referred_by_display = f"{referred_by}" if referred_by else "None"
+
     msg = f"""👤 **User Details**
 
 **Basic Info:**
 • ID: `{user_id}`
 • Name: {user_data.get("first_name", "N/A")}
-• Username: @{user_data.get("username", "N/A")}
+• Username: {username_display}
 • Language: {user_data.get("language", "hindi")}
+• Status: {blocked_status}
 • Joined: {join_date}
+• Current Task: {current_task_title}
 
 **Balance & Earnings:**
 • Current Balance: ₹{user_data.get("balance", 0)}
 • Total Earnings: ₹{user_data.get("total_earnings", 0)}
 
 **Activity:**
-• Completed Tasks: {len(user_data.get("completed_tasks", []))}
+• Completed Tasks: {completed_count}
 • Referrals: {user_data.get("referrals", 0)}
-• Referred By: {user_data.get("referred_by", "None")}
+• Referred By: {referred_by_display}
 
 **Custom Settings:**
 • Referral Reward: {ref_reward_display}
