@@ -882,8 +882,9 @@ def start_command(message):
         )
         return
 
-    # Admin users will see the normal menu plus an Admin Panel button
-    # This allows easy access without typing /admin.
+    if is_admin(user_id):
+        admin_panel(message)
+        return
 
     # Extract referrer_id from command if present (for new users)
     referrer_id = None
