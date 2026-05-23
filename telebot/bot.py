@@ -2,39 +2,48 @@
 import json
 import os
 import shutil
+import sys
 import threading
 import time
 import uuid
 from datetime import datetime, timedelta
 from typing import Any, Dict, List
 
+from dotenv import load_dotenv
 import requests
 import telebot
 from flask import Flask
 from telebot import types
-from dotenv import load_dotenv
-from urllib.parse import quote_plus, unquote_plus
 
 load_dotenv()
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
-ADMIN_ID = int(os.environ.get("ADMIN_ID", "5367009004"))
-ADMIN_IDS = [int(x.strip()) for x in os.environ.get("ADMIN_IDS", "5367009004,6580698563").split(",") if x.strip()]
+BOT_TOKEN = (os.getenv("BOT_TOKEN") or "").strip()
+_invalid_tokens = {"", "YOUR_TELEGRAM_BOT_TOKEN", "your_telegram_bot_token"}
+if BOT_TOKEN in _invalid_tokens or ":" not in BOT_TOKEN:
+    print(
+        "\n[ERROR] BOT_TOKEN missing or invalid.\n"
+        "Telegram token must look like: 123456789:AAHe... (there is a ':' in the middle).\n"
+        "1) Open Telegram -> @BotFather -> /token or create a bot with /newbot\n"
+        "2) Edit this file and set:  telebot\\.env  ->  BOT_TOKEN=paste_here\n"
+        "\n[Hindi] .env mein BOT_TOKEN par BotFather wala asli token lagao; "
+        "abhi placeholder ya galat value hai.\n"
+    )
+    sys.exit(1)
+ADMIN_ID = int(os.getenv("ADMIN_ID", "5367009004"))  # Primary admin ID
+ADMIN_IDS = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "5367009004,6580698563").split(",") if x.strip()]
 
 BOT_USERNAME = os.getenv("BOT_USERNAME", "Tasktoearnmoneybot")
-MINIMUM_WITHDRAWAL = 10
-REFERRAL_REWARD = 2
-REFERRAL_MILESTONE_COUNT = 5
-REFERRAL_MILESTONE_REWARD = 10
-DEFAULT_WELCOME_BONUS = 5
-USERS_DATA_FILE = os.path.join(DATA_DIR, "users_data.json")
-BOT_DATA_FILE = os.path.join(DATA_DIR, "bot_data.json")
-BLOCKED_USERS_FILE = os.path.join(DATA_DIR, "blocked_users.json")
-ACTIVITY_LOG_FILE = os.path.join(DATA_DIR, "activity_log.json")
-TASK_SUBMISSIONS_FILE = os.path.join(DATA_DIR, "task_submissions.json")
-BACKUP_DIR = os.path.join(DATA_DIR, "backups")
+MINIMUM_WITHDRAWAL = int(os.getenv("MINIMUM_WITHDRAWAL", "10"))
+REFERRAL_REWARD = int(os.getenv("REFERRAL_REWARD", "2"))
+REFERRAL_MILESTONE_COUNT = int(os.getenv("REFERRAL_MILESTONE_COUNT", "5"))
+REFERRAL_MILESTONE_REWARD = int(os.getenv("REFERRAL_MILESTONE_REWARD", "10"))
+DEFAULT_WELCOME_BONUS = int(os.getenv("DEFAULT_WELCOME_BONUS", "5"))
+USERS_DATA_FILE = "data/users_data.json"
+BOT_DATA_FILE = "data/bot_data.json"
+BLOCKED_USERS_FILE = "data/blocked_users.json"
+ACTIVITY_LOG_FILE = "data/activity_log.json"
+TASK_SUBMISSIONS_FILE = "data/task_submissions.json"
+BACKUP_DIR = "data/backups"
 MAX_BACKUPS = 50
 
 admin_state = {}
@@ -202,8 +211,8 @@ def is_admin(user_id):
 
 
 def ensure_data_directory():
-    if not os.path.exists(DATA_DIR):
-        os.makedirs(DATA_DIR)
+    if not os.path.exists("data"):
+        os.makedirs("data")
     if not os.path.exists(BACKUP_DIR):
         os.makedirs(BACKUP_DIR)
 
@@ -331,16 +340,6 @@ def save_json_file(filepath, data):
         return False
 
 
-def make_callback_data(prefix, value):
-    return f"{prefix}:{quote_plus(str(value))}"
-
-
-def parse_callback_data(data, prefix):
-    if data.startswith(prefix + ":"):
-        return unquote_plus(data.split(":", 1)[1])
-    return None
-
-
 def get_all_users_data():
     return load_json_file(USERS_DATA_FILE)
 
@@ -356,9 +355,6 @@ def user_exists(user_id):
 
 
 def create_user(user_id, first_name, username, referrer_id=None):
-    # Do not create user accounts for admins
-    if is_admin(user_id):
-        return
     users_data = get_all_users_data()
     bot_data = get_bot_data()
     settings = bot_data.get("settings", {})
@@ -718,86 +714,11 @@ def create_category_keyboard(categories):
         icon = category_icons.get(category, "📋")
         btn = types.InlineKeyboardButton(
             f"{icon} {category}", 
-            callback_data=make_callback_data("category", category)
+            callback_data=f"category_{category}"
         )
         keyboard.add(btn)
     
     return keyboard
-
-
-def refresh_admin_panel(admin_chat_id, message_id):
-    keyboard = types.InlineKeyboardMarkup(row_width=2)
-    btn1 = types.InlineKeyboardButton(
-        "💸 Withdrawal Requests", callback_data="admin_withdrawals"
-    )
-    btn2 = types.InlineKeyboardButton("🎯 Manage Tasks", callback_data="admin_tasks")
-    btn3 = types.InlineKeyboardButton("📊 User Statistics", callback_data="admin_stats")
-    btn4 = types.InlineKeyboardButton(
-        "💰 Adjust Balance", callback_data="admin_adjust_balance"
-    )
-    btn5 = types.InlineKeyboardButton(
-        "🚫 Block/Unblock User", callback_data="admin_block_user"
-    )
-    btn6 = types.InlineKeyboardButton(
-        "📨 Message Center", callback_data="admin_message_center"
-    )
-    btn7 = types.InlineKeyboardButton(
-        "🔗 Referral Settings", callback_data="admin_referral_settings"
-    )
-    btn8 = types.InlineKeyboardButton(
-        "⚙️ Bot Settings", callback_data="admin_global_settings"
-    )
-    btn9 = types.InlineKeyboardButton(
-        "📢 Manage Channels", callback_data="admin_channels"
-    )
-    refresh_btn = types.InlineKeyboardButton(
-        "🔄 Refresh Panel", callback_data="admin_refresh"
-    )
-
-    keyboard.add(btn1, btn2)
-    keyboard.add(btn3, btn4)
-    keyboard.add(btn5, btn6)
-    keyboard.add(btn7, btn8)
-    keyboard.add(btn9)
-    keyboard.add(refresh_btn)
-
-    admin_msg = """🔧 **Admin Panel**
-
-Select an option:
-
-💸 Withdrawal Requests - Manage user withdrawals
-🎯 Manage Tasks - Add/Edit tasks
-📊 User Statistics - View all user stats
-💰 Adjust Balance - Add/deduct user balance
-🚫 Block/Unblock - Block or unblock users
-📨 Message Center - Broadcast messages
-🔗 Referral Settings - Per-user referral settings
-⚙️ Bot Settings - Global bot settings
-📢 Manage Channels - Add/Remove required channels
-🔄 Refresh Panel - Refresh this panel"""
-
-    try:
-        bot.edit_message_text(
-            admin_msg,
-            admin_chat_id,
-            message_id,
-            reply_markup=keyboard,
-            parse_mode="Markdown",
-        )
-    except Exception:
-        # Fallback: send a new admin panel message
-        try:
-            bot.send_message(admin_chat_id, admin_msg, reply_markup=keyboard, parse_mode="Markdown")
-        except Exception:
-            pass
-
-
-def complete_admin_action(admin_id, state):
-    try:
-        refresh_admin_panel(admin_id, state.get("message_id"))
-    except Exception:
-        pass
-    admin_state.pop(admin_id, None)
 
 
 app = Flask(__name__)
@@ -846,8 +767,7 @@ def status():
 
 def run_server():
     try:
-        port = int(os.environ.get("PORT", 5000))
-        app.run(host="0.0.0.0", port=port, debug=False, use_reloader=False)
+        app.run(host="0.0.0.0", port=5000, debug=False, use_reloader=False)
     except Exception as e:
         print(f"❌ Keep-alive server error: {e}")
 
@@ -856,18 +776,10 @@ def keep_alive():
     server_thread = threading.Thread(target=run_server)
     server_thread.daemon = True
     server_thread.start()
-    print(
-        f"🌐 Keep-alive server started on 0.0.0.0:{os.environ.get('PORT', '5000')}"
-    )
+    print("🌐 Keep-alive server started on port 5000")
 
-
-if not BOT_TOKEN:
-    raise RuntimeError(
-        "BOT_TOKEN is not set. Please add BOT_TOKEN to your environment variables or .env file."
-    )
 
 bot = telebot.TeleBot(BOT_TOKEN)
-print(f"Loaded bot with ADMIN_ID={ADMIN_ID}, ADMIN_IDS={ADMIN_IDS}")
 
 initialize_data_files()
 
@@ -880,10 +792,6 @@ def start_command(message):
             message,
             "🚫 आप इस बॉट का उपयोग नहीं कर सकते / You are blocked from using this bot",
         )
-        return
-
-    if is_admin(user_id):
-        admin_panel(message)
         return
 
     # Extract referrer_id from command if present (for new users)
@@ -953,9 +861,6 @@ To use this bot, please join the following channels:
     keyboard.add(btn1, btn2)
     keyboard.add(btn3, btn4)
     keyboard.add(btn5, btn6)
-    if is_admin(user_id):
-        admin_shortcut_btn = types.KeyboardButton("⚙️ Admin Panel")
-        keyboard.add(admin_shortcut_btn)
 
     bot_data = get_bot_data()
     settings = bot_data.get("settings", {})
@@ -972,12 +877,6 @@ To use this bot, please join the following channels:
     )
     bot.reply_to(message, welcome_msg, reply_markup=keyboard)
     log_activity(user_id, "start_command", {})
-
-
-@bot.message_handler(func=lambda message: message.text == "⚙️ Admin Panel")
-def admin_shortcut(message):
-    if is_admin(message.from_user.id):
-        admin_panel(message)
 
 
 @bot.message_handler(commands=["admin"])
@@ -1036,10 +935,7 @@ Select an option:
 🔄 Refresh Panel - Refresh this panel"""
 
     bot.send_message(
-        message.from_user.id,
-        admin_msg,
-        reply_markup=types.ReplyKeyboardRemove(),
-        parse_mode="Markdown",
+        message.from_user.id, admin_msg, reply_markup=keyboard, parse_mode="Markdown"
     )
 
 
@@ -1047,9 +943,6 @@ Select an option:
 def handle_admin_callbacks(call):
     if not is_admin(call.from_user.id):
         return
-
-    admin_id = call.from_user.id
-    ADMIN_ID = admin_id
 
     if call.data == "admin_users_list":
         users_data = get_all_users_data()
@@ -1227,7 +1120,7 @@ Choose message type:
         
         for cat in categories:
             btn = types.InlineKeyboardButton(
-                f"📝 Edit: {cat}", callback_data=make_callback_data("admin_edit_category", cat)
+                f"📝 Edit: {cat}", callback_data=f"admin_edit_category_{cat}"
             )
             keyboard.add(btn)
         
@@ -1242,8 +1135,8 @@ Choose message type:
             parse_mode="Markdown",
         )
 
-    elif parse_callback_data(call.data, "admin_edit_category") is not None:
-        category = parse_callback_data(call.data, "admin_edit_category")
+    elif call.data.startswith("admin_edit_category_"):
+        category = call.data.split("admin_edit_category_", 1)[1]
         tasks_in_cat = get_tasks_by_category(category)
         
         msg = f"📝 **Edit Category: {category}**\n\n"
@@ -1256,10 +1149,10 @@ Choose message type:
         keyboard = types.InlineKeyboardMarkup(row_width=1)
         
         rename_btn = types.InlineKeyboardButton(
-            "✏️ Rename Category", callback_data=make_callback_data("admin_rename_category", category)
+            "✏️ Rename Category", callback_data=f"admin_rename_category_{category}"
         )
         delete_btn = types.InlineKeyboardButton(
-            "🗑 Delete Category", callback_data=make_callback_data("admin_delete_category", category)
+            "🗑 Delete Category", callback_data=f"admin_delete_category_{category}"
         )
         back_btn = types.InlineKeyboardButton(
             "🔙 Back to Categories", callback_data="admin_manage_categories"
@@ -1277,8 +1170,8 @@ Choose message type:
             parse_mode="Markdown",
         )
 
-    elif parse_callback_data(call.data, "admin_rename_category") is not None:
-        category = parse_callback_data(call.data, "admin_rename_category")
+    elif call.data.startswith("admin_rename_category_"):
+        category = call.data.split("admin_rename_category_", 1)[1]
         msg = bot.edit_message_text(
             f"📝 **Rename Category**\n\nCurrent name: {category}\n\nEnter new category name:",
             call.message.chat.id,
@@ -1291,8 +1184,8 @@ Choose message type:
             "message_id": msg.message_id,
         }
 
-    elif parse_callback_data(call.data, "admin_delete_category") is not None:
-        category = parse_callback_data(call.data, "admin_delete_category")
+    elif call.data.startswith("admin_delete_category_"):
+        category = call.data.split("admin_delete_category_", 1)[1]
         tasks_in_cat = get_tasks_by_category(category)
         
         msg = f"🗑 **Delete Category: {category}**\n\n"
@@ -1304,13 +1197,13 @@ Choose message type:
         
         keyboard = types.InlineKeyboardMarkup(row_width=1)
         move_btn = types.InlineKeyboardButton(
-            "📂 Move to General", callback_data=make_callback_data("admin_move_category", category)
+            "📂 Move to General", callback_data=f"admin_move_category_{category}"
         )
         delete_all_btn = types.InlineKeyboardButton(
-            "🗑 Delete All Tasks", callback_data=make_callback_data("admin_delete_all_category", category)
+            "🗑 Delete All Tasks", callback_data=f"admin_delete_all_category_{category}"
         )
         cancel_btn = types.InlineKeyboardButton(
-            "❌ Cancel", callback_data=make_callback_data("admin_edit_category", category)
+            "❌ Cancel", callback_data=f"admin_edit_category_{category}"
         )
         
         keyboard.add(move_btn)
@@ -1325,11 +1218,10 @@ Choose message type:
             parse_mode="Markdown",
         )
 
-    elif parse_callback_data(call.data, "admin_move_category") is not None:
-        category = parse_callback_data(call.data, "admin_move_category")
+    elif call.data.startswith("admin_move_category_"):
+        category = call.data.split("admin_move_category_", 1)[1]
         bot_data = get_bot_data()
         tasks = bot_data.get("tasks", [])
-        moved_count = sum(1 for task in tasks if task.get("category") == category)
         
         # Move all tasks from this category to General
         for task in tasks:
@@ -1338,7 +1230,7 @@ Choose message type:
         
         save_bot_data(bot_data)
         
-        bot.answer_callback_query(call.id, f"✅ Moved {moved_count} tasks to General")
+        bot.answer_callback_query(call.id, f"✅ Moved {len([t for t in tasks if t.get('category') == 'General'])} tasks to General")
         
         # Go back to categories
         categories = get_task_categories()
@@ -1353,7 +1245,7 @@ Choose message type:
         
         for cat in categories:
             btn = types.InlineKeyboardButton(
-                f"📝 Edit: {cat}", callback_data=make_callback_data("admin_edit_category", cat)
+                f"📝 Edit: {cat}", callback_data=f"admin_edit_category_{cat}"
             )
             keyboard.add(btn)
         
@@ -1368,8 +1260,8 @@ Choose message type:
             parse_mode="Markdown",
         )
 
-    elif parse_callback_data(call.data, "admin_delete_all_category") is not None:
-        category = parse_callback_data(call.data, "admin_delete_all_category")
+    elif call.data.startswith("admin_delete_all_category_"):
+        category = call.data.split("admin_delete_all_category_", 1)[1]
         bot_data = get_bot_data()
         tasks = bot_data.get("tasks", [])
         
@@ -1395,7 +1287,7 @@ Choose message type:
         
         for cat in categories:
             btn = types.InlineKeyboardButton(
-                f"📝 Edit: {cat}", callback_data=make_callback_data("admin_edit_category", cat)
+                f"📝 Edit: {cat}", callback_data=f"admin_edit_category_{cat}"
             )
             keyboard.add(btn)
         
@@ -2256,11 +2148,8 @@ def show_users_page(chat_id, message_id, page, per_page):
         user_name = user_data.get("first_name", "Unknown")
         balance = user_data.get("balance", 0)
         tasks = len(user_data.get("completed_tasks", []))
-        referrals = user_data.get("referrals", 0)
-        username = user_data.get("username")
-        username_display = f"@{username}" if username else "N/A"
 
-        btn_text = f"{user_name} | {username_display} | ₹{balance} | {tasks} tasks | {referrals} refs"
+        btn_text = f"{user_name} (ID: {user_id}) - ₹{balance} | {tasks} tasks"
         btn = types.InlineKeyboardButton(
             btn_text, callback_data=f"admin_view_user_{user_id}"
         )
@@ -2331,46 +2220,23 @@ def show_user_details(chat_id, message_id, user_id):
         "%Y-%m-%d %H:%M"
     )
 
-    username_value = user_data.get("username")
-    username_display = f"@{username_value}" if username_value else "N/A"
-    blocked_status = "🚫 Blocked" if is_user_blocked(user_id) else "✅ Active"
-
-    current_task_id = user_data.get("current_task")
-    current_task_title = "None"
-    if current_task_id:
-        task = next(
-            (t for t in bot_data.get("tasks", []) if t.get("id") == current_task_id),
-            None,
-        )
-        current_task_title = (
-            f"{task.get('title')} (ID: {current_task_id})"
-            if task
-            else f"Unknown Task (ID: {current_task_id})"
-        )
-
-    completed_count = len(user_data.get("completed_tasks", []))
-    referred_by = user_data.get("referred_by")
-    referred_by_display = f"{referred_by}" if referred_by else "None"
-
     msg = f"""👤 **User Details**
 
 **Basic Info:**
 • ID: `{user_id}`
 • Name: {user_data.get("first_name", "N/A")}
-• Username: {username_display}
+• Username: @{user_data.get("username", "N/A")}
 • Language: {user_data.get("language", "hindi")}
-• Status: {blocked_status}
 • Joined: {join_date}
-• Current Task: {current_task_title}
 
 **Balance & Earnings:**
 • Current Balance: ₹{user_data.get("balance", 0)}
 • Total Earnings: ₹{user_data.get("total_earnings", 0)}
 
 **Activity:**
-• Completed Tasks: {completed_count}
+• Completed Tasks: {len(user_data.get("completed_tasks", []))}
 • Referrals: {user_data.get("referrals", 0)}
-• Referred By: {referred_by_display}
+• Referred By: {user_data.get("referred_by", "None")}
 
 **Custom Settings:**
 • Referral Reward: {ref_reward_display}
@@ -2430,8 +2296,6 @@ def show_user_edit_options(chat_id, message_id, user_id):
 )
 def handle_admin_input(message):
     admin_id = message.from_user.id
-    # allow existing code below that references ADMIN_ID to use the current admin's id
-    ADMIN_ID = admin_id
     state = admin_state.get(admin_id)
     if not state:
         return
@@ -2448,7 +2312,7 @@ def handle_admin_input(message):
                 bot.send_message(ADMIN_ID, f"❌ User ID {user_id} not found")
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "set_ref_reward":
         user_id = state["user_id"]
@@ -2478,7 +2342,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "set_milestone_count":
         user_id = state["user_id"]
@@ -2507,7 +2371,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid number")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "set_milestone_reward":
         user_id = state["user_id"]
@@ -2537,7 +2401,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "set_welcome_bonus":
         user_id = state["user_id"]
@@ -2566,7 +2430,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "add_balance":
         user_id = state["user_id"]
@@ -2581,7 +2445,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "deduct_balance":
         user_id = state["user_id"]
@@ -2596,7 +2460,7 @@ def handle_admin_input(message):
             )
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "search_user_for_referral":
         try:
@@ -2608,7 +2472,7 @@ def handle_admin_input(message):
                 bot.send_message(ADMIN_ID, f"❌ User ID {user_id} not found")
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "search_user_for_balance":
         try:
@@ -2649,7 +2513,7 @@ Choose action:"""
                 bot.send_message(ADMIN_ID, f"❌ User ID {user_id} not found")
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "search_user_for_block":
         try:
@@ -2694,7 +2558,7 @@ Choose action:"""
                 bot.send_message(ADMIN_ID, f"❌ User ID {user_id} not found")
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "edit_global_min_withdrawal":
         try:
@@ -2711,14 +2575,9 @@ Choose action:"""
             log_activity(
                 ADMIN_ID, "admin_edit_global_min_withdrawal", {"amount": amount}
             )
-            # refresh admin panel in-place
-            try:
-                refresh_admin_panel(admin_id, state.get("message_id"))
-            except Exception:
-                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount. कृपया सही राशि enter करें।")
-        del admin_state[admin_id]
+        del admin_state[ADMIN_ID]
 
     elif action == "edit_global_ref_reward":
         try:
@@ -2745,13 +2604,9 @@ Choose action:"""
                 "admin_edit_global_ref_reward",
                 {"amount": amount, "notified": success},
             )
-            try:
-                refresh_admin_panel(admin_id, state.get("message_id"))
-            except Exception:
-                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount. कृपया सही राशि enter करें।")
-        del admin_state[admin_id]
+        del admin_state[ADMIN_ID]
 
     elif action == "edit_global_milestone_count":
         try:
@@ -2778,13 +2633,9 @@ Choose action:"""
                 "admin_edit_global_milestone_count",
                 {"count": count, "notified": success},
             )
-            try:
-                refresh_admin_panel(admin_id, state.get("message_id"))
-            except Exception:
-                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid number. कृपया सही संख्या enter करें।")
-        del admin_state[admin_id]
+        del admin_state[ADMIN_ID]
 
     elif action == "edit_global_milestone_reward":
         try:
@@ -2796,7 +2647,7 @@ Choose action:"""
             save_bot_data(bot_data)
             bot.send_message(
                 ADMIN_ID,
-                f"✅ सभी users के लिए Milestone Reward ₹{amount} set हो गया!\n\nअब milestone complete होने पर यह bonus मिलेगा।",
+                f"✅ सभी users के लिए Milestone Reward ₹{amount} set हो गया!\n\नअब milestone complete होने पर यह bonus मिलेगा।",
             )
 
             msg_text = f"🔔 **Milestone Reward Updated!**\n\n🏆 New bonus: ₹{amount}\n\n🔗 Start referring: /refer"
@@ -2811,13 +2662,9 @@ Choose action:"""
                 "admin_edit_global_milestone_reward",
                 {"amount": amount, "notified": success},
             )
-            try:
-                refresh_admin_panel(admin_id, state.get("message_id"))
-            except Exception:
-                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount. कृपया सही राशि enter करें।")
-        del admin_state[admin_id]
+        del admin_state[ADMIN_ID]
 
     elif action == "edit_global_welcome_bonus":
         try:
@@ -2844,13 +2691,9 @@ Choose action:"""
                 "admin_edit_global_welcome_bonus",
                 {"amount": amount, "notified": success},
             )
-            try:
-                refresh_admin_panel(admin_id, state.get("message_id"))
-            except Exception:
-                pass
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid amount. कृपया सही राशि enter करें।")
-        del admin_state[admin_id]
+        del admin_state[ADMIN_ID]
 
     elif action == "msg_single_get_user":
         try:
@@ -2871,10 +2714,10 @@ Choose action:"""
                     ADMIN_ID,
                     f"❌ User ID {user_id} not found. कृपया सही User ID enter करें।",
                 )
-                complete_admin_action(admin_id, state)
+                del admin_state[ADMIN_ID]
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid User ID. कृपया सही number enter करें।")
-            complete_admin_action(admin_id, state)
+            del admin_state[ADMIN_ID]
 
     elif action == "msg_single_send":
         user_id = state["user_id"]
@@ -2897,7 +2740,7 @@ Choose action:"""
             )
         except Exception as e:
             bot.send_message(ADMIN_ID, f"❌ Message send करने में error आई:\n{str(e)}")
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "msg_broadcast_get_message":
         message_text = message.text.strip()
@@ -2954,7 +2797,7 @@ Choose action:"""
                 "message": message_text[:100],
             },
         )
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "task_add_title":
         state["task_data"]["title"] = message.text.strip()
@@ -3033,7 +2876,7 @@ Choose action:"""
                 "notified": success,
             },
         )
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "rename_category":
         old_category = state["old_category"]
@@ -3042,12 +2885,12 @@ Choose action:"""
         
         if not new_category:
             bot.send_message(ADMIN_ID, "❌ Category name cannot be empty!")
-            complete_admin_action(admin_id, state)
+            del admin_state[ADMIN_ID]
             return
         
         if old_category == new_category:
             bot.send_message(ADMIN_ID, "❌ New name is same as old name!")
-            complete_admin_action(admin_id, state)
+            del admin_state[ADMIN_ID]
             return
         
         bot_data = get_bot_data()
@@ -3076,7 +2919,7 @@ Choose action:"""
                 "tasks_updated": renamed_count,
             },
         )
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "channel_add_details":
         try:
@@ -3165,7 +3008,7 @@ Available categories:
                     {"task_id": task_id, "field": "title", "new_value": new_title},
                 )
                 break
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "task_edit_desc":
         task_id = state["task_id"]
@@ -3186,7 +3029,7 @@ Available categories:
                     {"task_id": task_id, "field": "description"},
                 )
                 break
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "task_edit_link":
         task_id = state["task_id"]
@@ -3203,7 +3046,7 @@ Available categories:
                     ADMIN_ID, "admin_task_edited", {"task_id": task_id, "field": "link"}
                 )
                 break
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
     elif action == "task_edit_reward":
         try:
@@ -3231,12 +3074,12 @@ Available categories:
                         },
                     )
                     break
-            complete_admin_action(admin_id, state)
+            del admin_state[ADMIN_ID]
         except:
             bot.send_message(
                 ADMIN_ID, "❌ Invalid reward amount. कृपया सही राशि enter करें।"
             )
-            complete_admin_action(admin_id, state)
+            del admin_state[ADMIN_ID]
 
     elif action == "task_edit_qty":
         try:
@@ -3260,10 +3103,10 @@ Available categories:
                         {"task_id": task_id, "field": "quantity", "new_value": new_qty},
                     )
                     break
-            complete_admin_action(admin_id, state)
+            del admin_state[ADMIN_ID]
         except:
             bot.send_message(ADMIN_ID, "❌ Invalid quantity. कृपया सही संख्या enter करें।")
-            complete_admin_action(admin_id, state)
+            del admin_state[ADMIN_ID]
 
     elif action == "task_edit_category":
         task_id = state["task_id"]
@@ -3272,7 +3115,7 @@ Available categories:
         
         if not new_category:
             bot.send_message(ADMIN_ID, "❌ Category name cannot be empty!")
-            complete_admin_action(admin_id, state)
+            del admin_state[ADMIN_ID]
             return
         
         bot_data = get_bot_data()
@@ -3293,7 +3136,7 @@ Available categories:
                     {"task_id": task_id, "field": "category", "new_value": new_category},
                 )
                 break
-        complete_admin_action(admin_id, state)
+        del admin_state[ADMIN_ID]
 
 
 @bot.message_handler(
@@ -3360,13 +3203,9 @@ def handle_check_membership(call):
                 )
 
             # Create new user with referral
-            if not is_admin(user_id):
-                create_user(
-                    user_id, call.from_user.first_name, call.from_user.username, referrer_id
-                )
-            else:
-                # Don't create admin as a regular user
-                bot.send_message(user_id, "You're using an admin account.")
+            create_user(
+                user_id, call.from_user.first_name, call.from_user.username, referrer_id
+            )
 
             # Reward referrer
             add_user_balance(referrer_id, referral_reward)
@@ -3519,11 +3358,11 @@ def tasks_command(message):
     log_activity(user_id, "tasks_categories_viewed", {"categories": len(categories)})
 
 
-@bot.callback_query_handler(func=lambda call: call.data.startswith("category:"))
+@bot.callback_query_handler(func=lambda call: call.data.startswith("category_"))
 def handle_category_selection(call):
     user_id = call.from_user.id
     user_language = get_user_language(user_id)
-    category = parse_callback_data(call.data, "category")
+    category = call.data.split("category_", 1)[1]
     
     if is_user_blocked(user_id):
         bot.answer_callback_query(call.id, get_message(user_language, "user_blocked"))
